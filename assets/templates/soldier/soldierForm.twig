@@ -1,0 +1,69 @@
+{% extends 'page.twig' %}
+
+{% block titre %}
+    Editer les informations concernant {{ soldier.name }} {{ soldier.surname }}
+{% endblock %}
+
+{% block contenu %}
+    <form action="index.php?object=soldier&amp;action=save" method="post">
+        {% if soldier.id is not empty %}
+            <input type="hidden" id="idSoldier" name="idSoldier" value="{{ soldier.id }}"/>
+        {% endif %}
+        <div>
+            <label for="name">Prénom</label>
+            <input type="text" id="name" name="name" value="{{ soldier.name }}" required/>
+            {{ errors.name is defined ? display_errors(errors.name) : null }}
+        </div>
+        <div>
+            <label for="surname">Nom</label>
+            <input type="text" id="surname" name="surname" value="{{ soldier.surname }}" required/>
+            {{ errors.surname is defined ? display_errors(errors.surname) : null }}
+        </div>
+        <div>
+            <label for="gender">Sexe</label>
+            <select id="gender" name="gender">
+                <option value="1" {{ soldier.gender == '1' ? 'selected' : null }}>Masculin</option>
+                <option value="2" {{ soldier.gender == '2' ? 'selected' : null }}>Féminin</option>
+            </select>
+            {{ errors.gender is defined ? display_errors(errors.gender) : null }}
+        </div>
+        <div>
+            <label for="birthDate">Date de naissance</label>
+            <input type="text" id="birthDate" name="birthDate" value="{{ soldier.birthDate }}" required/>
+            {{ errors.birthDate is defined ? display_errors(errors.birthDate) : null }}
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="{{ soldier.email }}" required/>
+            {{ errors.email is defined ? display_errors(errors.email) : null }}
+        </div>
+        <div>
+            <label for="address">Adresse</label>
+            <input type="text" id="address" name="address" value="{{ soldier.address }}" required/>
+            {{ errors.address is defined ? display_errors(errors.address) : null }}
+        </div>
+        <div>
+            <label for="admissionDate">Date d'entrée dans l'armée</label>
+            <input type="text" id="admissionDate" name="admissionDate" value="{{ soldier.admissionDate }}" required/>
+            {{ errors.admissionDate is defined ? display_errors(errors.admissionDate) : null }}
+        </div>
+        <div>
+            <label for="diploma">Dernier diplôme</label>
+            <input type="text" id="diploma" name="diploma" value="{{ soldier.diploma }}" required/>
+            {{ errors.diploma is defined ? display_errors(errors.diploma) : null }}
+        </div>
+        <div>
+            <label for="grade">Grade actuel</label>
+            <input type="text" id="grade" name="grade" value="{{ soldier.grade }}" required/>
+            {{ errors.grade is defined ? display_errors(errors.grade) : null }}
+        </div>
+        <div>
+            <label for="lastUpgradeDate">Date d'obtention du grade actuel</label>
+            <input type="text" id="lastUpgradeDate" name="lastUpgradeDate" value="{{ soldier.lastUpgradeDate }}" required/>
+            {{ errors.lastUpgradeDate is defined ? display_errors(errors.lastUpgradeDate) : null }}
+        </div>
+        <div class="button">
+            <button type="submit">{{ soldier.id is not empty ? 'Modifier' : 'Enregistrer' }}</button>
+        </div>
+    </form>
+{% endblock %}

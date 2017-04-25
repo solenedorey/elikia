@@ -1,0 +1,19 @@
+{% extends 'page.twig' %}
+
+{% block titre %}
+    Informations du militaire {{ soldier.name }} {{ soldier.surname }}
+{% endblock %}
+
+{% block contenu %}
+    <a href="index.php?object=soldier&amp;action=displayList">Liste des militaires</a>
+    <ul>
+        <li>Sexe : {% if soldier.gender == 1 %}homme {% elseif soldier.gender == 2 %}femme{% endif %}</li>
+        <li>Date de naissance : {{ soldier.birthDate }}</li>
+        <li>Adresse : {{ soldier.address }}</li>
+        <li>Email : {{ soldier.email }}</li>
+        <li>Date d'entrée dans l'armée : {{ soldier.admissionDate }}</li>
+        <li>Dernier diplôme : {{ soldier.diploma }}</li>
+        <li>Grade actuel : {{ soldier.grade }}</li>
+        <li>Date d'acquisition du grade : {{ soldier.lastUpgradeDate }}</li>
+    </ul>
+{% endblock %}

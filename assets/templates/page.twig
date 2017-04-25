@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Elikia</title>
+    <script src="https://use.fontawesome.com/8a7d364ade.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+<header class="principal">
+    <a href="index.php"><img src="assets/media/images/news.png" alt="logo"></a>
+    <h1><a href="index.php">ELIKIA</a></h1>
+    <nav id="menu_principal">
+        <ul>
+            <li>
+                <a href="index.php">Accueil</a>
+            </li>
+            <li>
+                <a href="index.php?action=about">A propos</a>
+            </li>
+            <li>
+                <a href="index.php?object=soldier&amp;action=displayList">Soldats</a>
+            </li>
+        </ul>
+        {{ include('frag/connectionForm.twig') }}
+    </nav>
+</header>
+<main>
+    <h2>{% block titre %}{% endblock %}</h2>
+    {% block contenu %}{% endblock %}
+</main>
+</body>
+</html>

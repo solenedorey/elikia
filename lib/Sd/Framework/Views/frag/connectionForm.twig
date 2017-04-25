@@ -1,0 +1,17 @@
+{% if not is_connected() %}
+<form action="{{ request_uri() }}" method="post">
+    <div>
+        <label for="auth_login">Login</label>
+        <input type="text" id="auth_login" name="auth_login" value="" required/>
+    </div>
+    <div>
+        <label for="auth_password">Mot de passe</label>
+        <input type="text" id="auth_password" name="auth_password" value="" required/>
+    </div>
+    <div class="button">
+        <button type="submit">Connexion</button>
+    </div>
+</form>
+{% else %}
+<a href="index.php?action=logOut">Déconnexion</a>
+{% endif %}

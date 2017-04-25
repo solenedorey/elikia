@@ -1,0 +1,25 @@
+{% extends 'page.twig' %}
+
+{% block titre %}
+    Liste des militaires
+{% endblock %}
+
+{% block contenu %}
+    {% if soldiers is empty %}
+        <p>Aucun article</p>
+    {% else %}
+        <ul>
+            {% for soldier in soldiers %}
+                <li>
+                    <a href="index.php?object=soldier&amp;action=displayDetails&amp;idSoldier={{ soldier.id }}">
+                        {{ soldier.name }} {{ soldier.surname }}
+                    </a>
+                    <a href="index.php?object=soldier&amp;action=edit&amp;idSoldier={{ soldier.id }}"> - Modifier </a>
+                    <a href="index.php?object=soldier&amp;action=delete&amp;idSoldier={{ soldier.id }}">-
+                        Supprimer</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <div><a href="index.php?object=soldier&amp;action=edit">Enregistrer un nouveau militaire</a></div>
+{% endblock %}
