@@ -1,8 +1,9 @@
 <?php
-namespace Sd\Framework;
+namespace Sd\Framework\User;
 
 use Jml\Tools\Database\ConnectionSingleton;
-use Sd\Framework\User\User;
+use Sd\Elikia\Soldier\Soldier;
+use Sd\Framework\AbstractClasses\AbstractUser;
 
 /**
  * Class UserDb
@@ -23,29 +24,76 @@ class UserDb
         $this->db = ConnectionSingleton::getInstance()->getConnection();
     }
 
+
     /**
-     * Permet la récupération d'un utilisateur en bd.
+     * Permet la récupération d'un utilisateur connecté en bd.
      * @param $login
      * @param $password
-     * @return bool|User
+     * @return bool|AbstractUser
      */
-    public function read($login, $password)
+    public function checkUser($login, $password)
     {
-        $request = "SELECT id_user, login, label
-        FROM user 
-        JOIN status USING (id_status) 
+        $request = "SELECT *
+        FROM soldier 
         WHERE login = :login AND password = :password";
         $stmt = $this->db->prepare($request);
         $stmt->execute(array(':login' => $login, ':password' => $password));
-        $row = $stmt->fetch(\PDO::FETCH_ASSOC);
+        $row = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         if ($row) {
-            $user= new User(
-                $row['id_user'],
+            $row = $row[0];
+            $soldier = new Soldier(
+                $row['id_soldier'],
+                $row['name'],
+                $row['surname'],
+                $row['birth_date'],
+                $row['address'],
+                $row['email'],
                 $row['login'],
-                $row['label']
+                $row['password'],
+                $row['gender'],
+                $row['admission_date'],
+                $row['diploma'],
+                $row['grade'],
+                $row['last_upgrade_date']
             );
-            return $user;
+            return $soldier;
         }
+        /*$request = "SELECT *
+        FROM secretary 
+        WHERE login = :login AND password = :password";
+        $row = $this->SqlRequest($request, true, array(':login' => $login, ':password' => $password));
+        if ($row) {
+            $row = $row[0];
+            $secretary = new Secretary(
+                $row['id_secretary'],
+                $row['name'],
+                $row['surname'],
+                $row['birth_date'],
+                $row['address'],
+                $row['email'],
+                $row['login'],
+                $row['password']
+            );
+            return $secretary;
+        }
+        $request = "SELECT *
+        FROM admin 
+        WHERE login = :login AND password = :password";
+        $row = $this->SqlRequest($request, true, array(':login' => $login, ':password' => $password));
+        if ($row) {
+            $row = $row[0];
+            $admin = new Admin(
+                $row['id_secretary'],
+                $row['name'],
+                $row['surname'],
+                $row['birth_date'],
+                $row['address'],
+                $row['email'],
+                $row['login'],
+                $row['password']
+            );
+            return $admin;
+        }*/
         return false;
     }
 }

@@ -43,6 +43,8 @@ try {
     header("HTTP/1.0 404 Not Found");
 }
 
+$request->synchronizeSession();
+
 /**
  * Récupérer les contenus de la page et les mettre dans les variables du template de page
  */

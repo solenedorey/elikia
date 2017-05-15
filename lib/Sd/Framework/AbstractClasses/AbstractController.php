@@ -1,6 +1,8 @@
 <?php
 namespace Sd\Framework\AbstractClasses;
 
+use Sd\Elikia\Managers\RoleManager;
+use Sd\Framework\HttpFoundation\Request;
 use Sd\Framework\HttpFoundation\Response;
 
 /**
@@ -10,17 +12,29 @@ use Sd\Framework\HttpFoundation\Response;
 abstract class AbstractController
 {
     /**
+     * @var Request
+     */
+    protected $request;
+    
+    /**
      * @var Response
      */
-    private $response;
+    protected $response;
+
+    /**
+     * @var RoleManager
+     */
+    protected $roleManager;
 
     /**
      * Constructeur de la classe AbstractController.
      * @param $response
      */
-    public function __construct(Response $response)
+    public function __construct(Response $response, Request $request)
     {
         $this->response = $response;
+        $this->request = $request;
+        $this->roleManager = RoleManager::getInstance();
     }
 
     /**

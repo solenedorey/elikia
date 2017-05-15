@@ -2,46 +2,61 @@
 namespace Sd\Framework\AbstractClasses;
 
 /**
- * Class AbstractPerson
+ * Class AbstractUser
  * @package Sd\Framework\AbstractClasses
  */
-class AbstractPerson
+class AbstractUser
 {
     /**
-     * Identifiant de la personne
+     * @var
+     */
+    protected $status;
+    
+    /**
+     * Identifiant de l'utilisateur
      * @var int
      */
     protected $id;
     
     /**
-     * Prénom de la personne
+     * Prénom de l'utilisateur
      * @var string
      */
     protected $name;
     
     /**
-     * Nom de la personne
+     * Nom de l'utilisateur
      * @var string
      */
     protected $surname;
     
     /**
-     * Année de naissance de la personne
+     * Année de naissance de l'utilisateur
      * @var string
      */
     protected $birthDate;
 
     /**
-     * Adresse de la personne
+     * Adresse de l'utilisateur
      * @var string
      */
     protected $address;
 
     /**
-     * Email de la personne
+     * Email de l'utilisateur
      * @var string
      */
     protected $email;
+
+    /**
+     * @var
+     */
+    private $login;
+
+    /**
+     * @var
+     */
+    private $password;
 
     /**
      * AbstractPerson constructor.
@@ -51,8 +66,10 @@ class AbstractPerson
      * @param $birthDate
      * @param $address
      * @param $email
+     * @param $login
+     * @param $password
      */
-    public function __construct($id, $name, $surname, $birthDate, $address, $email)
+    public function __construct($id, $name, $surname, $birthDate, $address, $email, $login, $password)
     {
         $this->id = $id;
         $this->name = $name;
@@ -60,8 +77,26 @@ class AbstractPerson
         $this->birthDate = $birthDate;
         $this->address = $address;
         $this->email = $email;
+        $this->login = $login;
+        $this->password = $password;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param mixed $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+    
     /**
      * @return mixed
      */
@@ -156,5 +191,37 @@ class AbstractPerson
     public function setEmail($email)
     {
         $this->email = $email;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    /**
+     * @param mixed $login
+     */
+    public function setLogin($login)
+    {
+        $this->login = $login;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
     }
 }

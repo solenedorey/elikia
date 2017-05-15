@@ -1,14 +1,14 @@
 <?php
 namespace Sd\Elikia\Soldier;
 
-use Sd\Framework\AbstractClasses\AbstractPerson;
-use Sd\Framework\AbstractClasses\AbstractPersonDb;
+use Sd\Framework\AbstractClasses\AbstractUser;
+use Sd\Framework\AbstractClasses\AbstractUserDb;
 
 /**
  * Class SoldierDb
  * @package Sd\Elikia\Soldier
  */
-class SoldierDb extends AbstractPersonDb
+class SoldierDb extends AbstractUserDb
 {
     /**
      * Constante permettant de stocker le nom de la table de la BD.
@@ -47,6 +47,8 @@ class SoldierDb extends AbstractPersonDb
             $row['birth_date'],
             $row['address'],
             $row['email'],
+            $row['login'],
+            $row['password'],
             $row['gender'],
             $row['admission_date'],
             $row['diploma'],
@@ -75,6 +77,8 @@ class SoldierDb extends AbstractPersonDb
                     $row['birth_date'],
                     $row['address'],
                     $row['email'],
+                    $row['login'],
+                    $row['password'],
                     $row['gender'],
                     $row['admission_date'],
                     $row['dilpoma'],
@@ -86,20 +90,20 @@ class SoldierDb extends AbstractPersonDb
         return $list;
     }
 
-    public function register(AbstractPerson $person)
+    public function register(AbstractUser $user)
     {
         $request = "INSERT INTO " . self::TABLE_NAME . " " . $this->requestPart();
-        parent::SqlRequest($request, false, $this->dataPart($person));
+        parent::SqlRequest($request, false, $this->dataPart($user));
         $lastId = $this->db->lastInsertId();
-        $person->setId($lastId);
+        $user->setId($lastId);
         return $lastId;
     }
 
-    public function update(AbstractPerson $person)
+    public function update(AbstractUser $user)
     {
         $request = "UPDATE " . self::TABLE_NAME . " " . $this->requestPart() . " WHERE id_soldier=:id";
-        $data = $this->dataPart($person);
-        $data["id"] = $person->getId();
+        $data = $this->dataPart($user);
+        $data["id"] = $user->getId();
         var_dump($data);
         return parent::SqlRequest($request, false, $data);
     }
@@ -110,23 +114,25 @@ class SoldierDb extends AbstractPersonDb
      */
     protected function requestPart()
     {
-        $sql = "SET name=:name, surname=:surname, birth_date=:birthDate, address=:address, email=:email, gender=:gender, admission_date=:admissionDate, diploma=:diploma, grade=:grade, last_upgrade_date=:lastUpgradeDate";
+        $sql = "SET name=:name, surname=:surname, birth_date=:birthDate, address=:address, email=:email, login=:login, password=:password, gender=:gender, admission_date=:admissionDate, diploma=:diploma, grade=:grade, last_upgrade_date=:lastUpgradeDate";
         return $sql;
     }
 
-    protected function dataPart(AbstractPerson $person)
+    protected function dataPart(AbstractUser $user)
     {
         return array(
-            'name' => $person->getName(),
-            'surname' => $person->getSurname(),
-            'birthDate' => $person->getBirthDate(),
-            'address' => $person->getAddress(),
-            'email' => $person->getEmail(),
-            'gender' => $person->getGender(),
-            'admissionDate' => $person->getAdmissionDate(),
-            'diploma' => $person->getDiploma(),
-            'grade' => $person->getGrade(),
-            'lastUpgradeDate' => $person->getLastUpgradeDate()
+            'name' => $user->getName(),
+            'surname' => $user->getSurname(),
+            'birthDate' => $user->getBirthDate(),
+            'address' => $user->getAddress(),
+            'email' => $user->getEmail(),
+            'login' => $user->getLogin(),
+            'password' => $user->getPassword(),
+            'gender' => $user->getGender(),
+            'admissionDate' => $user->getAdmissionDate(),
+            'diploma' => $user->getDiploma(),
+            'grade' => $user->getGrade(),
+            'lastUpgradeDate' => $user->getLastUpgradeDate()
         );
     }
     

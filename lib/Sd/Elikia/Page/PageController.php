@@ -14,8 +14,8 @@ class PageController extends AbstractController
 {
     /**
      * @var Request
+     * @var Request
      */
-    private $request;
 
     /**
      * Constructeur de la classe PageController.
@@ -24,8 +24,7 @@ class PageController extends AbstractController
      */
     public function __construct(Request $request, Response $response)
     {
-        $this->request = $request;
-        parent::__construct($response);
+        parent::__construct($response, $request);
     }
 
     /**
@@ -50,6 +49,5 @@ class PageController extends AbstractController
     public function logOut()
     {
         AuthenticationManager::getInstance($this->request)->logOut();
-        $this->home();
     }
 }

@@ -5,10 +5,10 @@ use Jml\Tools\Database\ConnectionSingleton;
 use Sd\Framework\AppInterfaces\PersistInterface;
 
 /**
- * Class AbstractPersonDb
+ * Class AbstractUserDb
  * @package Sd\Framework\AbstractClasses
  */
-abstract class AbstractPersonDb implements PersistInterface
+abstract class AbstractUserDb implements PersistInterface
 {
     /**
      * @var
@@ -49,29 +49,29 @@ abstract class AbstractPersonDb implements PersistInterface
     abstract public function readAll();
 
     /**
-     * @param AbstractPerson $person
+     * @param AbstractUser $user
      * @return mixed
      */
-    public function persist(AbstractPerson $person)
+    public function persist(AbstractUser $user)
     {
-        if (is_null($person->getId())) {
-            return $this->register($person);
+        if (is_null($user->getId())) {
+            return $this->register($user);
         } else {
-            return $this->update($person);
+            return $this->update($user);
         }
     }
 
     /**
-     * @param AbstractPerson $person
+     * @param AbstractUser $user
      * @return mixed
      */
-    abstract public function register(AbstractPerson $person);
+    abstract public function register(AbstractUser $user);
 
     /**
-     * @param AbstractPerson $person
+     * @param AbstractUser $user
      * @return mixed
      */
-    abstract public function update(AbstractPerson $person);
+    abstract public function update(AbstractUser $user);
 
     /**
      * @param $id

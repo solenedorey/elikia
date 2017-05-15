@@ -47,9 +47,9 @@ class FrontController
      */
     public function execute()
     {
+        $authManager = AuthenticationManager::getInstance($this->request);
         $formData = $this->request->getPost();
         if (isset($formData['auth_login']) && isset($formData['auth_password'])) {
-            $authManager = AuthenticationManager::getInstance($this->request);
             try {
                 $authManager->logIn($formData['auth_login'], $formData['auth_password']);
             } catch (AuthenticationException $e) {

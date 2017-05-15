@@ -10,9 +10,9 @@ use Sd\Framework\AppInterfaces\FormInterface;
 abstract class AbstractForm implements FormInterface
 {
     /**
-     * @var AbstractDocument
+     * @var AbstractUser
      */
-    protected $person;
+    protected $user;
 
     /**
      * @var
@@ -21,11 +21,11 @@ abstract class AbstractForm implements FormInterface
 
     /**
      * Constructeur de la classe AbstractDocumentForm.
-     * @param AbstractPerson $person
+     * @param AbstractUser $user
      */
-    public function __construct(AbstractPerson $person)
+    public function __construct(AbstractUser $user)
     {
-        $this->person = $person;
+        $this->user = $user;
     }
 
     /**
@@ -69,7 +69,7 @@ abstract class AbstractForm implements FormInterface
     public function isValid()
     {
         $manager = $this->validationStrategy();
-        $this->errors = $manager->validate($this->person);
+        $this->errors = $manager->validate($this->user);
         return count($this->errors) > 0 ? false : true;
     }
 

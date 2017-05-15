@@ -1,13 +1,13 @@
 <?php
 namespace Sd\Elikia\Soldier;
 
-use Sd\Framework\AbstractClasses\AbstractPerson;
+use Sd\Framework\AbstractClasses\AbstractUser;
 
 /**
  * Class Soldier
  * @package Sd\Elikia\Soldier
  */
-class Soldier extends AbstractPerson
+class Soldier extends AbstractUser
 {
     /**
      * Sexe du militaire
@@ -47,15 +47,18 @@ class Soldier extends AbstractPerson
      * @param $birthDate
      * @param $address
      * @param $email
+     * @param $login
+     * @param $password
      * @param $gender
      * @param $admissionDate
      * @param $diploma
      * @param $grade
      * @param $lastUpgradeDate
      */
-    public function __construct($id, $name, $surname, $birthDate, $address, $email, $gender, $admissionDate, $diploma, $grade, $lastUpgradeDate)
+    public function __construct($id, $name, $surname, $birthDate, $address, $email, $login, $password, $gender, $admissionDate, $diploma, $grade, $lastUpgradeDate)
     {
-        parent::__construct($id, $name, $surname, $birthDate, $address, $email);
+        parent::__construct($id, $name, $surname, $birthDate, $address, $email, $login, $password);
+        $this->status = SOLDIER;
         $this->gender = $gender;
         $this->admissionDate = $admissionDate;
         $this->diploma = $diploma;
@@ -149,7 +152,7 @@ class Soldier extends AbstractPerson
      */
     public static function createUnknownSoldier()
     {
-        return new self(null, '', '', '', '', '', '', '', '', '', '');
+        return new self(null, '', '', '', '', '', '', '', '', '', '', '', '');
     }
 
     /**
@@ -157,19 +160,21 @@ class Soldier extends AbstractPerson
      * @param $data
      * @return Soldier
      */
-    public function createFromArray($data)
+    public static function createFromArray($data)
     {
         $name = isset($data['name']) && $data['name'] != '' ? $data['name'] : '';
         $surname = isset($data['surname']) && $data['surname'] != '' ? $data['surname'] : '';
         $birthDate = isset($data['birthDate']) && $data['birthDate'] != '' ? $data['birthDate'] : '';
         $address = isset($data['address']) && $data['address'] != '' ? $data['address'] : '';
         $email = isset($data['email']) && $data['email'] != '' ? $data['email'] : '';
+        $login = isset($data['login']) && $data['login'] != '' ? $data['login'] : '';
+        $password = isset($data['password']) && $data['password'] != '' ? $data['password'] : '';
         $gender = isset($data['gender']) && $data['gender'] != '' ? $data['gender'] : '';
         $admissionDate = isset($data['admissionDate']) && $data['admissionDate'] != '' ? $data['admissionDate'] : '';
         $diploma = isset($data['diploma']) && $data['diploma'] != '' ? $data['diploma'] : '';
         $grade = isset($data['grade']) && $data['grade'] != '' ? $data['grade'] : '';
         $lastUpgradeDate = isset($data['lastUpgradeDate']) && $data['lastUpgradeDate'] != '' ? $data['lastUpgradeDate'] : '';
-        return new self(null, $name, $surname, $birthDate, $address, $email, $gender, $admissionDate, $diploma, $grade, $lastUpgradeDate);
+        return new self(null, $name, $surname, $birthDate, $address, $email, $login, $password, $gender, $admissionDate, $diploma, $grade, $lastUpgradeDate);
     }
 
     /**
@@ -192,6 +197,12 @@ class Soldier extends AbstractPerson
         }
         if (isset($data['email'])) {
             $this->setEmail($data['email']);
+        }
+        if (isset($data['login'])) {
+            $this->setLogin($data['login']);
+        }
+        if (isset($data['password'])) {
+            $this->setPassword($data['password']);
         }
         if (isset($data['gender'])) {
             $this->setGender($data['gender']);

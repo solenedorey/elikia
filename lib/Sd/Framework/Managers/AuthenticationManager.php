@@ -3,7 +3,7 @@ namespace Sd\Framework\Managers;
 
 use Sd\Framework\Exceptions\AuthenticationException;
 use Sd\Framework\HttpFoundation\Request;
-use Sd\Framework\UserDb;
+use Sd\Framework\User\UserDb;
 
 /**
  * Classe AuthentificationManager qui gère l'authentification des utlisateurs
@@ -18,14 +18,10 @@ class AuthenticationManager
     private static $instance;
 
     /**
-     * @var
+     * @var Request
      */
     private $request;
-
-    /**
-     * Constructeur de la classe AuthentificationManager.
-     * @param Request $request
-     */
+    
     private function __construct(Request $request)
     {
         $this->request = $request;
@@ -33,11 +29,10 @@ class AuthenticationManager
 
     /**
      * Méthode pour accéder à l'UNIQUE instance de la classe.
-     *
      * @param Request $request
-     * @return AuthentificationManager , l'instance du singleton
+     * @return AuthenticationManager , l'instance du singleton
      */
-    public static function getInstance(Request $request)
+    public static function getInstance(Request $request = null)
     {
         if (!(self::$instance instanceof self)) {
             self::$instance = new self($request);
@@ -58,8 +53,11 @@ class AuthenticationManager
      * Permet de récupérer les infos concernant l'utilisateur.
      * @return null
      */
-    public function getInfoUser()
+    public function getInfoUser($key = null)
     {
+        if ($key !== null) {
+            return $this->isConnected() ? $this->request->getItemSession('user')[$key] : null;
+        }
         return $this->isConnected() ? $this->request->getItemSession('user') : null;
     }
 
@@ -90,7 +88,7 @@ class AuthenticationManager
      */
     public function logIn($login, $password)
     {
-        $user = (new UserDb())->read($login, $password);
+        $user = (new UserDb())->checkUser($login, $password);
         if ($user) {
             $this->authentication($user->getId(), $user->getLogin(), $user->getStatus());
         } else {

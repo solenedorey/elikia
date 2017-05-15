@@ -1,7 +1,7 @@
 <?php
 namespace Sd\Framework\AppInterfaces;
 
-use Sd\Framework\AbstractClasses\AbstractPerson;
+use Sd\Framework\AbstractClasses\AbstractUser;
 
 /**
  * Interface PersistInterface définissant les méthodes obligatoires pour tout objet de type Bd.
@@ -21,22 +21,22 @@ interface PersistInterface
     public function readAll();
 
     /**
-     * @param AbstractPerson $person
+     * @param AbstractUser $user
      * @return mixed
      */
-    public function persist(AbstractPerson $person);
+    public function persist(AbstractUser $user);
 
     /**
-     * @param AbstractPerson $person
+     * @param AbstractUser $user
      * @return mixed
      */
-    public function register(AbstractPerson $person);
+    public function register(AbstractUser $user);
 
     /**
-     * @param AbstractPerson $person
+     * @param AbstractUser $user
      * @return mixed
      */
-    public function update(AbstractPerson $person);
+    public function update(AbstractUser $user);
 
     /**
      * @param $id

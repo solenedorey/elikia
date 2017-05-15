@@ -9,13 +9,10 @@ class SoldierController extends AbstractController
 {
     private $soldierDb;
 
-    private $request;
-
     public function __construct(Request $request, Response $response)
     {
         $this->soldierDb = new SoldierDb();
-        $this->request = $request;
-        parent::__construct($response);
+        parent::__construct($response, $request);
     }
 
     /**

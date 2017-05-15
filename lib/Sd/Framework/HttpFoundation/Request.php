@@ -44,10 +44,9 @@ class Request
     }
 
     /**
-     * Destructeur de la classe Request.
      * Permet de faire la synchronisation avec $_SESSION.
      */
-    public function __destruct()
+    public function synchronizeSession()
     {
         $_SESSION = $this->session;
     }
