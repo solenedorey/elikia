@@ -58,7 +58,7 @@ class UserDb
             );
             return $soldier;
         }
-        /*$request = "SELECT *
+        $request = "SELECT *
         FROM secretary 
         WHERE login = :login AND password = :password";
         $row = $this->SqlRequest($request, true, array(':login' => $login, ':password' => $password));
@@ -93,7 +93,7 @@ class UserDb
                 $row['password']
             );
             return $admin;
-        }*/
+        }
         return false;
     }
 }

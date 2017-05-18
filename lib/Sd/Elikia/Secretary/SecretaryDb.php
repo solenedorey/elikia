@@ -1,22 +1,22 @@
 <?php
-namespace Sd\Elikia\Soldier;
+namespace Sd\Elikia\Secretary;
 
 use Sd\Framework\AbstractClasses\AbstractUser;
 use Sd\Framework\AbstractClasses\AbstractUserDb;
 
 /**
- * Class SoldierDb
- * @package Sd\Elikia\Soldier
+ * Class SecretaryDb
+ * @package Sd\Elikia\Secretary
  */
-class SoldierDb extends AbstractUserDb
+class SecretaryDb extends AbstractUserDb
 {
     /**
      * Constante permettant de stocker le nom de la table de la BD.
      */
-    const TABLE_NAME = 'soldier';
+    const TABLE_NAME = 'secretary';
 
     /**
-     * Constructeur de la classe SoldierDb.
+     * Constructeur de la classe SecretaryDb.
      */
     public function __construct()
     {
@@ -27,35 +27,30 @@ class SoldierDb extends AbstractUserDb
     /**
      * Permet de lire un militaire en base de données.
      * @param $id
-     * @return Soldier
+     * @return Secretary
      * @throws \Exception
      */
     public function read($id)
     {
         $request = "SELECT * 
         FROM " . self::TABLE_NAME . " 
-        WHERE id_soldier = :id";
+        WHERE id_secretary = :id";
         $row = parent::SqlRequest($request, true, array(':id' => $id));
         if ($row == false) {
-            throw new \Exception("Militaire non trouvé en bd");
+            throw new \Exception("Secrétaire non trouvé en bd");
         }
         $row = $row[0];
-        $soldier = new Soldier(
-            $row['id_soldier'],
+        $secretary = new Secretary(
+            $row['id_secretary'],
             $row['name'],
             $row['surname'],
             $row['birth_date'],
             $row['address'],
             $row['email'],
             $row['login'],
-            $row['password'],
-            $row['gender'],
-            $row['admission_date'],
-            $row['diploma'],
-            $row['grade'],
-            $row['last_upgrade_date']
+            $row['password']
         );
-        return $soldier;
+        return $secretary;
     }
 
     /**
@@ -70,20 +65,15 @@ class SoldierDb extends AbstractUserDb
         $rows = parent::SqlRequest($request, true);
         if ($rows) {
             foreach ($rows as $row) {
-                $list[] = new Soldier(
-                    $row['id_soldier'],
+                $list[] = new Secretary(
+                    $row['id_secretary'],
                     $row['name'],
                     $row['surname'],
                     $row['birth_date'],
                     $row['address'],
                     $row['email'],
                     $row['login'],
-                    $row['password'],
-                    $row['gender'],
-                    $row['admission_date'],
-                    $row['diploma'],
-                    $row['grade'],
-                    $row['last_upgrade_date']
+                    $row['password']
                 );
             }
         }
@@ -101,7 +91,7 @@ class SoldierDb extends AbstractUserDb
 
     public function update(AbstractUser $user)
     {
-        $request = "UPDATE " . self::TABLE_NAME . " " . $this->requestPart() . " WHERE id_soldier=:id";
+        $request = "UPDATE " . self::TABLE_NAME . " " . $this->requestPart() . " WHERE id_secretary=:id";
         $data = $this->dataPart($user);
         $data["id"] = $user->getId();
         var_dump($data);
@@ -114,7 +104,7 @@ class SoldierDb extends AbstractUserDb
      */
     protected function requestPart()
     {
-        $sql = "SET name=:name, surname=:surname, birth_date=:birthDate, address=:address, email=:email, login=:login, password=:password, gender=:gender, admission_date=:admissionDate, diploma=:diploma, grade=:grade, last_upgrade_date=:lastUpgradeDate";
+        $sql = "SET name=:name, surname=:surname, birth_date=:birthDate, address=:address, email=:email, login=:login, password=:password";
         return $sql;
     }
 
@@ -127,18 +117,13 @@ class SoldierDb extends AbstractUserDb
             'address' => $user->getAddress(),
             'email' => $user->getEmail(),
             'login' => $user->getLogin(),
-            'password' => $user->getPassword(),
-            'gender' => $user->getGender(),
-            'admissionDate' => $user->getAdmissionDate(),
-            'diploma' => $user->getDiploma(),
-            'grade' => $user->getGrade(),
-            'lastUpgradeDate' => $user->getLastUpgradeDate()
+            'password' => $user->getPassword()
         );
     }
     
     public function delete($id)
     {
-        $request = "DELETE FROM " . self::TABLE_NAME . " WHERE id_soldier=:id";
+        $request = "DELETE FROM " . self::TABLE_NAME . " WHERE id_secretary=:id";
         return parent::SqlRequest($request, false, array(':id' => $id));
     }
 }

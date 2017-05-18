@@ -49,5 +49,6 @@ class PageController extends AbstractController
     public function logOut()
     {
         AuthenticationManager::getInstance($this->request)->logOut();
+        header('Location: index.php');
     }
 }
