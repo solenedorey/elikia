@@ -5,21 +5,58 @@
 {% endblock %}
 
 {% block contenu %}
-    {% if soldiers is empty %}
-        <p>Aucun article</p>
-    {% else %}
-        <ul>
-            {% for soldier in soldiers %}
-                <li>
-                    <a href="index.php?object=soldier&amp;action=displayDetails&amp;idSoldier={{ soldier.id }}">
-                        {{ soldier.name }} {{ soldier.surname }}
-                    </a>
-                    <a href="index.php?object=soldier&amp;action=edit&amp;idSoldier={{ soldier.id }}"> - Modifier </a>
-                    <a href="index.php?object=soldier&amp;action=delete&amp;idSoldier={{ soldier.id }}">-
-                        Supprimer</a>
-                </li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+        <form action="" class="form-inline" method="post">
+            <div class="form-group">
+                Afficher les militaires qui
+            </div>
+            <div class="form-group">
+                <select name="filter-group" id="filter-group" class="form-control">
+                    <option selected="selected" value="oui">partiront à la retraite</option>
+                    <option value="non">pourront être promu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                dans
+            </div>
+            <div class="form-group">
+                <select name="filter-priority" id="filter-priority" class="form-control">
+                    <option selected="selected" value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+            <button type="button" class="btn btn-default">Filtrer</button>
+        </form>
+
+        <div class="panel panel-default" style="margin-top:35px;">
+            <div class="panel-heading">
+                <h3 class="panel-title">Liste des militaires</h3>
+            </div>
+            <div class="panel-body">
+                {% if soldiers is empty %}
+                    <p>Aucun soldat.</p>
+                {% else %}
+                    <ul class="list-group" id="task-list">
+                        {% for soldier in soldiers %}
+                            <li class="list-group-item priority-0">
+                                <a href="index.php?object=soldier&amp;action=displayDetails&amp;idSoldier={{ soldier.id }}">
+                                    {{ soldier.name }} {{ soldier.surname }}
+                                </a>
+                                <a href="index.php?object=soldier&amp;action=edit&amp;idSoldier={{ soldier.id }}"> - Modifier </a>
+                                <a href="index.php?object=soldier&amp;action=delete&amp;idSoldier={{ soldier.id }}">-
+                                    Supprimer</a>
+                                <a class="btn btn-xs btn-danger remove-task pull-right" aria-label="Left Align" href="index.php?object=soldier&amp;action=delete&amp;idSoldier={{ soldier.id }}">
+                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
     <div><a href="index.php?object=soldier&amp;action=edit">Enregistrer un nouveau militaire</a></div>
 {% endblock %}

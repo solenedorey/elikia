@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block contenu %}
-    <a href="index.php?object=soldier&amp;action=displayList">Liste des militaires</a>
     <ul>
         <li>Sexe : {% if soldier.gender == 1 %}homme {% elseif soldier.gender == 2 %}femme{% endif %}</li>
         <li>Date de naissance : {{ soldier.birthDate }}</li>
@@ -16,4 +15,5 @@
         <li>Grade actuel : {{ soldier.grade }}</li>
         <li>Date d'acquisition du grade : {{ soldier.lastUpgradeDate }}</li>
     </ul>
+    <a href="index.php?object=soldier&amp;action=displayList">Retour à la liste des militaires</a>
 {% endblock %}

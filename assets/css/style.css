@@ -1,5 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
 
+/* Bootstrap */
+
+body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+    position: static;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+    margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+    width: auto;
+}
+
+.navbar-default {
+    background: #2C3E50 none;
+}
+
+/*
+
 html, body {
     margin: 0;
     padding: 0;
@@ -59,4 +86,4 @@ main a {
 
 main a:hover {
     font-weight: 700;
-}
+}*/
