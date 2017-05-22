@@ -1,4 +1,4 @@
-{% extends 'page.twig' %}
+{% extends 'layout.twig' %}
 
 {% block titre %}
     Liste des militaires
@@ -39,16 +39,19 @@
                 {% if soldiers is empty %}
                     <p>Aucun soldat.</p>
                 {% else %}
-                    <ul class="list-group" id="task-list">
+                    <ul class="list-group  soldiersList" id="task-list">
                         {% for soldier in soldiers %}
-                            <li class="list-group-item priority-0">
+                            <li class="list-group-item priority-0" data-id="{{ soldier.id }}">
                                 <a href="index.php?object=soldier&amp;action=displayDetails&amp;idSoldier={{ soldier.id }}">
                                     {{ soldier.name }} {{ soldier.surname }}
                                 </a>
-                                <a href="index.php?object=soldier&amp;action=edit&amp;idSoldier={{ soldier.id }}"> - Modifier </a>
+                                <a href="index.php?object=soldier&amp;action=edit&amp;idSoldier={{ soldier.id }}"> -
+                                    Modifier </a>
                                 <a href="index.php?object=soldier&amp;action=delete&amp;idSoldier={{ soldier.id }}">-
                                     Supprimer</a>
-                                <a class="btn btn-xs btn-danger remove-task pull-right" aria-label="Left Align" href="index.php?object=soldier&amp;action=delete&amp;idSoldier={{ soldier.id }}">
+                                <a class="btn btn-xs btn-danger delete-btn pull-right" aria-label="Left Align"
+                                   data-id="{{ soldier.id }}"
+                                   href="index.php?object=soldier&amp;action=delete&amp;idSoldier={{ soldier.id }}">
                                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                                 </a>
                             </li>
@@ -59,4 +62,9 @@
         </div>
     </div>
     <div><a href="index.php?object=soldier&amp;action=edit">Enregistrer un nouveau militaire</a></div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="assets/js/cleanNode.js"></script>
+    <script src="assets/js/ajaxDeleteSoldier.js"></script>
 {% endblock %}

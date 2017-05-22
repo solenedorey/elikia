@@ -52,6 +52,15 @@ class Request
     }
 
     /**
+    * Permet de savoir si la requête HTTP en cours a été faite via XHR ou non.
+    * @return bool
+    */
+    public function isXhrRequest()
+    {
+        return isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] === 'XMLHttpRequest';
+    }
+
+    /**
      * @param $cle
      * @return null
      */

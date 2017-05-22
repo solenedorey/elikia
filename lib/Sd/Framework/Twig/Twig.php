@@ -57,6 +57,10 @@ class Twig
             return AuthenticationManager::getInstance($this->request)->isConnected();
         });
         $this->twig->addFunction($isConnected);
+        $isXhrRequest = new Twig_SimpleFunction('is_xhr_request', function () {
+            return $this->request->isXhrRequest();
+        });
+        $this->twig->addFunction($isXhrRequest);
     }
 
     /**

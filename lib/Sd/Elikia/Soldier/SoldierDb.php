@@ -23,6 +23,28 @@ class SoldierDb extends AbstractUserDb
         parent::__construct();
     }
 
+    /**
+     * Permet de récupérer la liste des grades
+     */
+    public function getAllGrades()
+    {
+        $request = "SELECT *
+        FROM " . self::TABLE_NAME;
+        $list = array();
+        $rows = parent::SqlRequest($request, true);
+        if ($rows) {
+            foreach ($rows as $row) {
+                $list[] = new Grade(
+                    $row['id_grade'],
+                    $row['label'],
+                    $row['years_of_service'],
+                    $row['lower_grade'],
+                    $row['lower_grade_years']
+                );
+            }
+        }
+        return $list;
+    }
 
     /**
      * Permet de lire un militaire en base de données.
@@ -34,6 +56,8 @@ class SoldierDb extends AbstractUserDb
     {
         $request = "SELECT * 
         FROM " . self::TABLE_NAME . " 
+        JOIN grade
+        USING (id_grade)
         WHERE id_soldier = :id";
         $row = parent::SqlRequest($request, true, array(':id' => $id));
         if ($row == false) {
@@ -52,7 +76,7 @@ class SoldierDb extends AbstractUserDb
             $row['gender'],
             $row['admission_date'],
             $row['diploma'],
-            $row['grade'],
+            $row['label'],
             $row['last_upgrade_date']
         );
         return $soldier;
@@ -65,7 +89,9 @@ class SoldierDb extends AbstractUserDb
     public function readAll()
     {
         $request = "SELECT * 
-        FROM " . self::TABLE_NAME;
+        FROM " . self::TABLE_NAME . "
+        JOIN grade
+        USING (id_grade)";
         $list = array();
         $rows = parent::SqlRequest($request, true);
         if ($rows) {
@@ -82,7 +108,7 @@ class SoldierDb extends AbstractUserDb
                     $row['gender'],
                     $row['admission_date'],
                     $row['diploma'],
-                    $row['grade'],
+                    $row['label'],
                     $row['last_upgrade_date']
                 );
             }

@@ -44,7 +44,8 @@ class SoldierController extends AbstractController
         } else {
             $soldier = Soldier::createUnknownSoldier();
         }
-        $this->render('soldier/SoldierForm.twig', array('soldier' => $soldier));
+        $gradesList = $this->soldierDb->getAllGrades();
+        $this->render('soldier/SoldierForm.twig', array('soldier' => $soldier, 'grades' => $gradesList));
     }
 
     /**

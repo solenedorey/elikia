@@ -23,6 +23,25 @@ body {
 
 .navbar-default {
     background: #2C3E50 none;
+    height: 10vh;
+}
+
+.navbar-default .navbar-brand {
+    color: #67ADAD;
+    text-shadow: none;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+    text-shadow: none;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #67ADAD;
 }
 
 /*
