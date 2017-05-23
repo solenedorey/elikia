@@ -6,29 +6,45 @@
 
 {% block contenu %}
     <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-        <form action="" class="form-inline" method="post">
+
+        <button type="button" class="btn btn-default add-filter">Ajouter un filtre</button>
+
+        <form action="" class="form-inline form-filter" method="post">
             <div class="form-group">
                 Afficher les militaires qui
             </div>
             <div class="form-group">
-                <select name="filter-group" id="filter-group" class="form-control">
-                    <option selected="selected" value="oui">partiront à la retraite</option>
-                    <option value="non">pourront être promu</option>
+                <select name="filter-group" id="filter-group" class="form-control filter-1">
+                    <option selected="selected" value="retire">partiront à la retraite</option>
+                    <option value="promotion">pourront être promu</option>
                 </select>
             </div>
-            <div class="form-group">
-                dans
+            <div class="filter-retire filter">
+                <div class="form-group">
+                    dans
+                </div>
+                <div class="form-group">
+                    <select name="period" id="period" class="form-control filter-2">
+                        <option value="2">2 mois</option>
+                        <option value="4">4 mois</option>
+                        <option value="6">6 mois</option>
+                        <option value="8">8 mois</option>
+                        <option value="10">10 mois</option>
+                        <option value="12" selected="selected">1 an</option>
+                    </select>
+                </div>
             </div>
-            <div class="form-group">
-                <select name="filter-priority" id="filter-priority" class="form-control">
-                    <option selected="selected" value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+            <div class="form-group filter-promotion filter hide">
+                <select name="grade" id="filter-priority" class="form-control filter-2">
+                    {% if grades %}
+                        {% for grade in grades %}
+                            <option value="{{ grade.label }}">{{ grade.label }}</option>
+                        {% endfor %}
+                    {% endif %}
                 </select>
             </div>
 
-            <button type="button" class="btn btn-default">Filtrer</button>
+            <button type="button" class="btn btn-default btn-filter-action">Filtrer</button>
         </form>
 
         <div class="panel panel-default" style="margin-top:35px;">
@@ -67,4 +83,5 @@
 {% block javascript %}
     <script src="assets/js/cleanNode.js"></script>
     <script src="assets/js/ajaxDeleteSoldier.js"></script>
+    <script src="assets/js/ajaxSoldiersList.js"></script>
 {% endblock %}

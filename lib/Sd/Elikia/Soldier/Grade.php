@@ -38,20 +38,52 @@ class Grade
     private $yearsOfLowerGrade;
 
     /**
+     * Diplôme requis pour l'obtention du grade
+     * @var int
+     */
+    private $diplomaType;
+
+    /**
+     * Age requis pour partir à la retraite avec ce grade
+     * @var int
+     */
+    private $ageToRetire;
+
+    /**
+     * Nombre d'années de services effectis requis pour partir à la retraite avec ce grade
+     * @var int
+     */
+    private $yearsToRetire;
+
+    /**
      * Grade constructor.
      * @param int $id
      * @param string $label
      * @param int $yearsOfService
      * @param string $lowerGrade
      * @param int $yearsOfLowerGrade
+     * @param int $diplomaType
+     * @param int $ageToRetire
+     * @param int $yearsToRetire
      */
-    public function __construct($id, $label, $yearsOfService, $lowerGrade, $yearsOfLowerGrade)
-    {
+    public function __construct(
+        $id,
+        $label,
+        $yearsOfService,
+        $lowerGrade,
+        $yearsOfLowerGrade,
+        $diplomaType,
+        $ageToRetire,
+        $yearsToRetire
+    ) {
         $this->id = $id;
         $this->label = $label;
         $this->yearsOfService = $yearsOfService;
         $this->lowerGrade = $lowerGrade;
         $this->yearsOfLowerGrade = $yearsOfLowerGrade;
+        $this->diplomaType = $diplomaType;
+        $this->ageToRetire = $ageToRetire;
+        $this->yearsToRetire = $yearsToRetire;
     }
 
     /**
@@ -89,7 +121,7 @@ class Grade
     /**
      * @return int
      */
-    public function getYearsOfService(): int
+    public function getYearsOfService()
     {
         return $this->yearsOfService;
     }
@@ -105,7 +137,7 @@ class Grade
     /**
      * @return string
      */
-    public function getLowerGrade(): string
+    public function getLowerGrade()
     {
         return $this->lowerGrade;
     }
@@ -121,7 +153,7 @@ class Grade
     /**
      * @return int
      */
-    public function getYearsOfLowerGrade(): int
+    public function getYearsOfLowerGrade()
     {
         return $this->yearsOfLowerGrade;
     }
@@ -132,5 +164,53 @@ class Grade
     public function setYearsOfLowerGrade(int $yearsOfLowerGrade)
     {
         $this->yearsOfLowerGrade = $yearsOfLowerGrade;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiplomaType()
+    {
+        return $this->diplomaType;
+    }
+
+    /**
+     * @param int $diplomaType
+     */
+    public function setDiplomaType($diplomaType)
+    {
+        $this->diplomaType = $diplomaType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getAgeToRetire()
+    {
+        return $this->ageToRetire;
+    }
+
+    /**
+     * @param int $ageToRetire
+     */
+    public function setAgeToRetire($ageToRetire)
+    {
+        $this->ageToRetire = $ageToRetire;
+    }
+
+    /**
+     * @return int
+     */
+    public function getYearsToRetire()
+    {
+        return $this->yearsToRetire;
+    }
+
+    /**
+     * @param int $yearsToRetire
+     */
+    public function setYearsToRetire($yearsToRetire)
+    {
+        $this->yearsToRetire = $yearsToRetire;
     }
 }

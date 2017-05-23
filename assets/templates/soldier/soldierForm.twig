@@ -52,14 +52,23 @@
             <input type="text" id="diploma" name="diploma" value="{{ soldier.diploma }}" required/>
             {{ errors.diploma is defined ? display_errors(errors.diploma) : null }}
         </div>
-        <div>
-            <label for="grade">Grade actuel</label>
-            <input type="text" id="grade" name="grade" value="{{ soldier.grade }}" required/>
-            {{ errors.grade is defined ? display_errors(errors.grade) : null }}
-        </div>
+
+        {% if grades %}
+            <div>
+                <label for="grade">Grade actuel</label>
+                <select id="grade" name="grade">
+                    {% for grade in grades %}
+                        <option value="{{ grade.label }}" {{ soldier.id is not empty and soldier.grade == grade.label ? 'selected' : null }}>{{ grade.label }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        {% endif %}
+        {{ errors.grade is defined ? display_errors(errors.grade) : null }}
+
         <div>
             <label for="lastUpgradeDate">Date d'obtention du grade actuel</label>
-            <input type="text" id="lastUpgradeDate" name="lastUpgradeDate" value="{{ soldier.lastUpgradeDate }}" required/>
+            <input type="text" id="lastUpgradeDate" name="lastUpgradeDate" value="{{ soldier.lastUpgradeDate }}"
+                   required/>
             {{ errors.lastUpgradeDate is defined ? display_errors(errors.lastUpgradeDate) : null }}
         </div>
         <div class="button">

@@ -1,12 +1,12 @@
 var xhrHtml = function (ev) {
     ev.preventDefault();
     var xhr = new XMLHttpRequest();
-    var idArticle = ev.currentTarget.getAttribute('data-id');
-    xhr.open('GET', 'index.php?objet=article&action=supprimer&idArticle=' + idArticle);
+    var idSoldier = ev.currentTarget.getAttribute('data-id');
+    xhr.open('GET', 'index.php?object=soldier&action=delete&idSoldier=' + idSoldier);
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     xhr.responseType = 'document';
     xhr.onload = function (ev) {
-        document.querySelector('.soldiersList').removeChild(document.querySelector('.soldiersList li[data-id="' + idArticle + '"]'));
+        document.querySelector('.soldiersList').removeChild(document.querySelector('.soldiersList li[data-id="' + idSoldier + '"]'));
     };
     xhr.send();
 };

@@ -2,25 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aac3c1a9-1586-4a84-be54-a1afa38c4250" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/cleanNode.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/templates/layout.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/templates/main.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/modal.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/ajaxSoldiersList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ckeditor/ckeditor" afterPath="$PROJECT_DIR$/vendor/ckeditor/ckeditor" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/about.twig" afterPath="$PROJECT_DIR$/assets/templates/about.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/errorPage.twig" afterPath="$PROJECT_DIR$/assets/templates/errorPage.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/ajaxDeleteSoldier.js" afterPath="$PROJECT_DIR$/assets/js/ajaxDeleteSoldier.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/cleanNode.js" afterPath="$PROJECT_DIR$/assets/js/cleanNode.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/index.twig" afterPath="$PROJECT_DIR$/assets/templates/index.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/page.twig" afterPath="$PROJECT_DIR$/assets/templates/page.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/soldier/soldierDetails.twig" afterPath="$PROJECT_DIR$/assets/templates/soldier/soldierDetails.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig" afterPath="$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig" afterPath="$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php" afterPath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php" afterPath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php" afterPath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Sd/Framework/HttpFoundation/Request.php" afterPath="$PROJECT_DIR$/lib/Sd/Framework/HttpFoundation/Request.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Sd/Framework/Twig/Twig.php" afterPath="$PROJECT_DIR$/lib/Sd/Framework/Twig/Twig.php" />
     </list>
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,25 +23,43 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="dev" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="page.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/templates/page.twig">
+      <file leaf-file-name="SoldierController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="82" column="36" lean-forward="true" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
+            <state relative-caret-position="365">
+              <caret line="39" column="87" selection-start-line="39" selection-start-column="87" selection-end-line="39" selection-end-column="87" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SoldierController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php">
+      <file leaf-file-name="SoldierDb.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="47" column="105" lean-forward="true" selection-start-line="47" selection-start-column="105" selection-end-line="47" selection-end-column="105" />
-              <folding />
+            <state relative-caret-position="300">
+              <caret line="207" column="192" selection-start-line="207" selection-start-column="192" selection-end-line="207" selection-end-column="192" />
+              <folding>
+                <element signature="e#36#82#0#PHP" expanded="true" />
+                <marker date="1495558760000" expanded="true" signature="612:634" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+                <marker date="1495558760000" expanded="true" signature="612:639" ph="SELECT * FRO... grade" />
+                <marker date="1495558760000" expanded="true" signature="1370:1418" ph="SELECT * FRO... grade" />
+                <marker date="1495558760000" expanded="true" signature="2367:2390" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+                <marker date="1495558760000" expanded="true" signature="2367:2639" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+                <marker date="1495558760000" expanded="true" signature="3756:3879" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+                <marker date="1495558760000" expanded="true" signature="4710:4801" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+                <marker date="1495558760000" expanded="true" signature="5725:5762" ph="INSERT INTO ${self::TABLE_NAME}... " />
+                <marker date="1495558760000" expanded="true" signature="7544:7601" ph="DELETE FROM " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,57 +67,28 @@
       <file leaf-file-name="soldiersList.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="51" column="73" lean-forward="false" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
+            <state relative-caret-position="180">
+              <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajaxDeleteSoldier.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/ajaxDeleteSoldier.js">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+            <state relative-caret-position="390">
+              <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SoldierDb.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php">
+      <file leaf-file-name="soldierForm.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="41" column="45" lean-forward="true" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-              <folding>
-                <marker date="1495469509943" expanded="true" signature="612:634" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-                <marker date="1495469509943" expanded="true" signature="612:654" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-                <marker date="1495469509943" expanded="true" signature="1301:1424" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-                <marker date="1495469509943" expanded="true" signature="2249:2272" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-                <marker date="1495469509943" expanded="true" signature="2249:2340" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-                <marker date="1495469509943" expanded="true" signature="2249:2341" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-                <marker date="1495469509943" expanded="true" signature="3159:3196" ph="INSERT INTO ${self::TABLE_NAME}... " />
-                <marker date="1495469509943" expanded="true" signature="4874:4931" ph="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Grade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2658">
-              <caret line="134" column="5" lean-forward="false" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cleanNode.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/cleanNode.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="64" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -145,23 +129,24 @@
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/assets/css/bootstrap/bootstrap.css" />
         <option value="$PROJECT_DIR$/assets/css/bootstrap/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/lib/Sd/Framework/Twig/Twig.php" />
         <option value="$PROJECT_DIR$/lib/Sd/Framework/HttpFoundation/Request.php" />
         <option value="$PROJECT_DIR$/assets/templates/layout.twig" />
         <option value="$PROJECT_DIR$/assets/templates/soldier/main.twig" />
-        <option value="$PROJECT_DIR$/assets/templates/index.twig" />
         <option value="$PROJECT_DIR$/assets/templates/errorPage.twig" />
         <option value="$PROJECT_DIR$/assets/templates/about.twig" />
         <option value="$PROJECT_DIR$/assets/templates/soldier/soldierDetails.twig" />
-        <option value="$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig" />
         <option value="$PROJECT_DIR$/assets/templates/page.twig" />
+        <option value="$PROJECT_DIR$/assets/templates/index.twig" />
         <option value="$PROJECT_DIR$/assets/js/cleanNode.js" />
-        <option value="$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig" />
         <option value="$PROJECT_DIR$/assets/js/ajaxDeleteSoldier.js" />
+        <option value="$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig" />
+        <option value="$PROJECT_DIR$/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/assets/js/ajaxSoldiersList.js" />
+        <option value="$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig" />
+        <option value="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php" />
         <option value="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php" />
         <option value="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php" />
-        <option value="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php" />
       </list>
     </option>
   </component>
@@ -173,10 +158,19 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1050" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="773" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -194,25 +188,32 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -230,11 +231,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -250,17 +251,43 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Twig" />
+              <option name="myItemId" value="Managers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Loader" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -282,11 +309,141 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Exceptions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cleaners" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppInterfaces" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AbstractClasses" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -308,11 +465,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -330,11 +487,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -344,11 +501,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -362,11 +519,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -384,11 +541,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -398,11 +555,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="elikia" />
+              <option name="myItemId" value="dev" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -414,9 +571,26 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -445,27 +619,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -479,10 +633,6 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -493,23 +643,10 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
+      <command value="run-script" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
       <method />
     </configuration>
   </component>
@@ -529,33 +666,35 @@
       <workItem from="1495438867633" duration="875000" />
       <workItem from="1495455000613" duration="1431000" />
       <workItem from="1495456708311" duration="10396000" />
+      <workItem from="1495472678175" duration="102000" />
+      <workItem from="1495520397049" duration="16948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25434000" />
+    <option name="totallyTimeSpent" value="42484000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13177083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.134895" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,58 +708,38 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/templates/index.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="44" column="124" lean-forward="false" selection-start-line="44" selection-start-column="124" selection-end-line="44" selection-end-column="124" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldierDetails.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="17" column="98" lean-forward="false" selection-start-line="17" selection-start-column="98" selection-end-line="17" selection-end-column="98" />
-          <folding />
+          <caret line="17" column="98" selection-start-line="17" selection-start-column="98" selection-end-line="17" selection-end-column="98" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
-          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
-          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-          <folding />
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/page.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -628,15 +747,14 @@
     <entry file="file://$PROJECT_DIR$/assets/templates/index.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="924">
-          <caret line="44" column="124" lean-forward="true" selection-start-line="44" selection-start-column="124" selection-end-line="44" selection-end-column="124" />
+          <caret line="44" column="124" selection-start-line="44" selection-start-column="124" selection-end-line="44" selection-end-column="124" />
           <folding />
         </state>
       </provider>
@@ -644,39 +762,35 @@
     <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldierDetails.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="17" column="98" lean-forward="false" selection-start-line="17" selection-start-column="98" selection-end-line="17" selection-end-column="98" />
-          <folding />
+          <caret line="17" column="98" selection-start-line="17" selection-start-column="98" selection-end-line="17" selection-end-column="98" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
-          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/page.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
-          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -684,47 +798,42 @@
     <entry file="file://$PROJECT_DIR$/assets/templates/index.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldierDetails.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="17" column="98" lean-forward="false" selection-start-line="17" selection-start-column="98" selection-end-line="17" selection-end-column="98" />
-          <folding />
+          <caret line="17" column="98" selection-start-line="17" selection-start-column="98" selection-end-line="17" selection-end-column="98" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
-          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1029">
-          <caret line="49" column="49" lean-forward="false" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+          <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -732,7 +841,7 @@
     <entry file="file://$PROJECT_DIR$/assets/templates/page.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -740,31 +849,28 @@
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
-          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding />
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/page.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1113">
-          <caret line="53" column="6" lean-forward="true" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
+          <caret line="53" column="6" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -772,76 +878,56 @@
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/bootstrap/ie10-viewport-bug-workaround.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/bootstrap/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="4" column="3410" lean-forward="false" selection-start-line="4" selection-start-column="3410" selection-end-line="4" selection-end-column="3410" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/bootstrap/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="746">
-          <caret line="267" column="1" lean-forward="true" selection-start-line="267" selection-start-column="1" selection-end-line="267" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-          <folding />
+          <caret line="267" column="1" selection-start-line="267" selection-start-column="1" selection-end-line="267" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding />
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
-          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/main.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="33" lean-forward="true" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-          <folding />
+          <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/layout.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="58" lean-forward="true" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
-          <folding />
+          <caret line="0" column="58" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Sd/Framework/HttpFoundation/Request.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
-          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -849,39 +935,52 @@
     <entry file="file://$PROJECT_DIR$/lib/Sd/Framework/Twig/Twig.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
-          <caret line="31" column="98" lean-forward="true" selection-start-line="31" selection-start-column="98" selection-end-line="31" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/templates/index.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="19" />
-          <folding />
+          <caret line="31" column="98" selection-start-line="31" selection-start-column="98" selection-end-line="31" selection-end-column="98" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/about.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/errorPage.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/modal.js" />
+    <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/bootstrap/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="4" column="3125" selection-start-line="4" selection-start-column="3125" selection-end-line="4" selection-end-column="3125" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig">
+    <entry file="file://$PROJECT_DIR$/assets/templates/index.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+        <state relative-caret-position="150">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/cleanNode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -889,97 +988,107 @@
     <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldierDetails.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/page.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="82" column="36" lean-forward="true" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
+        <state relative-caret-position="575">
+          <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
+    <entry file="file://$PROJECT_DIR$/lib/Sd/Framework/AbstractClasses/AbstractUserDb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/cleanNode.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="51" column="73" lean-forward="false" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/ajaxDeleteSoldier.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="209">
+          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Soldier.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        <state relative-caret-position="284">
+          <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/ajaxDeleteSoldier.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="39" column="87" selection-start-line="39" selection-start-column="87" selection-end-line="39" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="64" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2658">
-          <caret line="134" column="5" lean-forward="false" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+        <state relative-caret-position="-865">
+          <caret line="123" column="39" selection-start-line="123" selection-start-column="39" selection-end-line="123" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/ajaxSoldiersList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="126" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="126" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="41" column="45" lean-forward="true" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+        <state relative-caret-position="300">
+          <caret line="207" column="192" selection-start-line="207" selection-start-column="192" selection-end-line="207" selection-end-column="192" />
           <folding>
-            <marker date="1495469509943" expanded="true" signature="612:634" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-            <marker date="1495469509943" expanded="true" signature="612:654" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-            <marker date="1495469509943" expanded="true" signature="1301:1424" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-            <marker date="1495469509943" expanded="true" signature="2249:2272" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-            <marker date="1495469509943" expanded="true" signature="2249:2340" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-            <marker date="1495469509943" expanded="true" signature="2249:2341" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-            <marker date="1495469509943" expanded="true" signature="3159:3196" ph="INSERT INTO ${self::TABLE_NAME}... " />
-            <marker date="1495469509943" expanded="true" signature="4874:4931" ph="DELETE FROM " />
+            <element signature="e#36#82#0#PHP" expanded="true" />
+            <marker date="1495558760000" expanded="true" signature="612:634" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+            <marker date="1495558760000" expanded="true" signature="612:639" ph="SELECT * FRO... grade" />
+            <marker date="1495558760000" expanded="true" signature="1370:1418" ph="SELECT * FRO... grade" />
+            <marker date="1495558760000" expanded="true" signature="2367:2390" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+            <marker date="1495558760000" expanded="true" signature="2367:2639" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+            <marker date="1495558760000" expanded="true" signature="3756:3879" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+            <marker date="1495558760000" expanded="true" signature="4710:4801" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+            <marker date="1495558760000" expanded="true" signature="5725:5762" ph="INSERT INTO ${self::TABLE_NAME}... " />
+            <marker date="1495558760000" expanded="true" signature="7544:7601" ph="DELETE FROM " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="47" column="105" lean-forward="true" selection-start-line="47" selection-start-column="105" selection-end-line="47" selection-end-column="105" />
-          <folding />
         </state>
       </provider>
     </entry>

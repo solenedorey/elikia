@@ -44,6 +44,10 @@ body {
     color: #67ADAD;
 }
 
+.form-filter {
+    display: none;
+}
+
 /*
 
 html, body {

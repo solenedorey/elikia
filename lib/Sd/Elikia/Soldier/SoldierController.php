@@ -26,7 +26,18 @@ class SoldierController extends AbstractController
     public function displayList()
     {
         $soldiers = $this->soldierDb->readAll();
-        $this->render('soldier/soldiersList.twig', array('soldiers' => $soldiers));
+        $gradesList = $this->soldierDb->getAllGrades();
+        $this->render('soldier/soldiersList.twig', array('soldiers' => $soldiers, 'grades' => $gradesList));
+    }
+    
+    public function displayListWithFilters() 
+    {
+        $filterType = $this->request->getItemGet('filter');
+        $filterValue = $this->request->getItemGet('value');
+        if ($filterType == 'promotion') {
+            $soldiersList = $this->soldierDb->soldiersLikelyToUpgrade($filterValue);
+        }
+        $this->render('soldier/soldiersList.twig', array('soldiers' => $soldiersList));
     }
 
     public function displayDetails()

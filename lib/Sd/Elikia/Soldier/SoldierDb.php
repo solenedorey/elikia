@@ -29,7 +29,7 @@ class SoldierDb extends AbstractUserDb
     public function getAllGrades()
     {
         $request = "SELECT *
-        FROM " . self::TABLE_NAME;
+        FROM grade";
         $list = array();
         $rows = parent::SqlRequest($request, true);
         if ($rows) {
@@ -39,7 +39,69 @@ class SoldierDb extends AbstractUserDb
                     $row['label'],
                     $row['years_of_service'],
                     $row['lower_grade'],
-                    $row['lower_grade_years']
+                    $row['lower_grade_years'],
+                    $row['level_diploma_required'],
+                    $row['age_required_to_retire'],
+                    $row['total_years_to_retire']
+                );
+            }
+        }
+        return $list;
+    }
+
+    /**
+     * Permet de récupérer l'id d'un grade
+     */
+    public function getGrade($label)
+    {
+        $request = "SELECT *
+        FROM grade WHERE label = :label";
+        $row = parent::SqlRequest($request, true, array(':label' => $label));
+        if ($row == false) {
+            throw new \Exception("Grade non trouvé en bd");
+        }
+        $row = $row[0];
+        $grade = new Grade(
+            $row['id_grade'],
+            $row['label'],
+            $row['years_of_service'],
+            $row['lower_grade'],
+            $row['lower_grade_years'],
+            $row['level_diploma_required'],
+            $row['age_required_to_retire'],
+            $row['total_years_to_retire']
+        );
+        return $grade;
+    }
+
+    public function soldiersLikelyToUpgrade($aimedGrade)
+    {
+        $grade = $this->getGrade($aimedGrade);
+        $yearsOfServiceAsked = $grade->getYearsOfService();
+        $gradeAskedId = $this->getGrade($grade->getLowerGrade())->getId();
+        $yearsOfGradeAsked = $grade->getYearsOfLowerGrade();
+        $diplomaRequired = $grade->getDiplomaType();
+        $request = "SELECT * 
+        FROM " . self::TABLE_NAME . "
+        WHERE id_grade = :gradeAskedId AND TIMESTAMPDIFF(YEAR, admission_date, DATE(NOW())) >= :yearsOfServiceAsked AND TIMESTAMPDIFF(YEAR, last_upgrade_date, DATE(NOW())) >= :yearsOfGradeAsked AND diploma = :diplomaRequired";
+        $list = array();
+        $rows = parent::SqlRequest($request, true, array(':gradeAskedId' => $gradeAskedId, ':yearsOfServiceAsked' => $yearsOfServiceAsked, ':yearsOfGradeAsked' => $yearsOfGradeAsked, ':diplomaRequired' => $diplomaRequired));
+        if ($rows) {
+            foreach ($rows as $row) {
+                $list[] = new Soldier(
+                    $row['id_soldier'],
+                    $row['name'],
+                    $row['surname'],
+                    $row['birth_date'],
+                    $row['address'],
+                    $row['email'],
+                    $row['login'],
+                    $row['password'],
+                    $row['gender'],
+                    $row['admission_date'],
+                    $row['level_diploma'],
+                    $row['label'],
+                    $row['last_upgrade_date']
                 );
             }
         }
@@ -75,7 +137,7 @@ class SoldierDb extends AbstractUserDb
             $row['password'],
             $row['gender'],
             $row['admission_date'],
-            $row['diploma'],
+            $row['level_diploma'],
             $row['label'],
             $row['last_upgrade_date']
         );
@@ -107,7 +169,7 @@ class SoldierDb extends AbstractUserDb
                     $row['password'],
                     $row['gender'],
                     $row['admission_date'],
-                    $row['diploma'],
+                    $row['level_diploma'],
                     $row['label'],
                     $row['last_upgrade_date']
                 );
@@ -118,8 +180,10 @@ class SoldierDb extends AbstractUserDb
 
     public function register(AbstractUser $user)
     {
+        $labelGrade = $user->getGrade();
+        $idGrade = $this->getGrade($labelGrade)->getId();
         $request = "INSERT INTO " . self::TABLE_NAME . " " . $this->requestPart();
-        parent::SqlRequest($request, false, $this->dataPart($user));
+        parent::SqlRequest($request, false, $this->dataPart($user, $idGrade));
         $lastId = $this->db->lastInsertId();
         $user->setId($lastId);
         return $lastId;
@@ -127,10 +191,11 @@ class SoldierDb extends AbstractUserDb
 
     public function update(AbstractUser $user)
     {
+        $labelGrade = $user->getGrade();
+        $idGrade = $this->getGrade($labelGrade)->getId();
         $request = "UPDATE " . self::TABLE_NAME . " " . $this->requestPart() . " WHERE id_soldier=:id";
-        $data = $this->dataPart($user);
+        $data = $this->dataPart($user, $idGrade);
         $data["id"] = $user->getId();
-        var_dump($data);
         return parent::SqlRequest($request, false, $data);
     }
 
@@ -140,11 +205,11 @@ class SoldierDb extends AbstractUserDb
      */
     protected function requestPart()
     {
-        $sql = "SET name=:name, surname=:surname, birth_date=:birthDate, address=:address, email=:email, login=:login, password=:password, gender=:gender, admission_date=:admissionDate, diploma=:diploma, grade=:grade, last_upgrade_date=:lastUpgradeDate";
+        $sql = "SET name=:name, surname=:surname, birth_date=:birthDate, address=:address, email=:email, login=:login, password=:password, gender=:gender, admission_date=:admissionDate, level_diploma=:diploma, id_grade=:idGrade, last_upgrade_date=:lastUpgradeDate";
         return $sql;
     }
 
-    protected function dataPart(AbstractUser $user)
+    protected function dataPart(AbstractUser $user, $idGrade)
     {
         return array(
             'name' => $user->getName(),
@@ -157,11 +222,11 @@ class SoldierDb extends AbstractUserDb
             'gender' => $user->getGender(),
             'admissionDate' => $user->getAdmissionDate(),
             'diploma' => $user->getDiploma(),
-            'grade' => $user->getGrade(),
+            'idGrade' => $idGrade,
             'lastUpgradeDate' => $user->getLastUpgradeDate()
         );
     }
-    
+
     public function delete($id)
     {
         $request = "DELETE FROM " . self::TABLE_NAME . " WHERE id_soldier=:id";
