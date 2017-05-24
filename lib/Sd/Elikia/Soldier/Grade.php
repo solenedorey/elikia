@@ -23,7 +23,7 @@ class Grade
      * Nombre d'années de services effectifs nécessaire à l'obtention du grade
      * @var int
      */
-    private $yearsOfService;
+    private $yearsOfServiceToUpgrade;
 
     /**
      * Grade précédent nécessaire à l'obtention du grade
@@ -59,7 +59,7 @@ class Grade
      * Grade constructor.
      * @param int $id
      * @param string $label
-     * @param int $yearsOfService
+     * @param int $yearsOfServiceToUpgrade
      * @param string $lowerGrade
      * @param int $yearsOfLowerGrade
      * @param int $diplomaType
@@ -69,7 +69,7 @@ class Grade
     public function __construct(
         $id,
         $label,
-        $yearsOfService,
+        $yearsOfServiceToUpgrade,
         $lowerGrade,
         $yearsOfLowerGrade,
         $diplomaType,
@@ -78,7 +78,7 @@ class Grade
     ) {
         $this->id = $id;
         $this->label = $label;
-        $this->yearsOfService = $yearsOfService;
+        $this->yearsOfServiceToUpgrade = $yearsOfServiceToUpgrade;
         $this->lowerGrade = $lowerGrade;
         $this->yearsOfLowerGrade = $yearsOfLowerGrade;
         $this->diplomaType = $diplomaType;
@@ -121,17 +121,17 @@ class Grade
     /**
      * @return int
      */
-    public function getYearsOfService()
+    public function getYearsOfServiceToUpgrade()
     {
-        return $this->yearsOfService;
+        return $this->yearsOfServiceToUpgrade;
     }
 
     /**
-     * @param int $yearsOfService
+     * @param int $yearsOfServiceToUpgrade
      */
-    public function setYearsOfService(int $yearsOfService)
+    public function setYearsOfServiceToUpgrade(int $yearsOfServiceToUpgrade)
     {
-        $this->yearsOfService = $yearsOfService;
+        $this->yearsOfServiceToUpgrade = $yearsOfServiceToUpgrade;
     }
 
     /**

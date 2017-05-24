@@ -67,6 +67,21 @@ class Soldier extends AbstractUser
     }
 
     /**
+     * Permet de retourner l'âge du soldat.
+     * @param $period
+     * @return false|string
+     */
+    public function getAge($period = 0) {
+        var_dump($period);
+        $age = date('Y', strtotime('+' . $period . ' month', strtotime("now"))) - date('Y', strtotime($this->getBirthDate()));
+        if (date('md', strtotime('+' . $period . ' month', strtotime("now"))) < date('md', strtotime($this->getBirthDate()))) {
+            return $age - 1;
+        }
+        var_dump($age);
+        return $age;
+    }
+
+    /**
      * @return string
      */
     public function getGender()
@@ -96,6 +111,19 @@ class Soldier extends AbstractUser
     public function setAdmissionDate($admissionDate)
     {
         $this->admissionDate = $admissionDate;
+    }
+
+    /**
+     * Permet de retourner le nombre d'année de service.
+     * @param $period
+     * @return false|string
+     */
+    public function getYearsOfService($period) {
+        $years = date('Y', strtotime('+' . $period . ' month', strtotime("now"))) - date('Y', strtotime($this->getAdmissionDate()));
+        if (date('md', strtotime('+' . $period . ' month', strtotime("now"))) < date('md', strtotime($this->getAdmissionDate()))) {
+            return $years - 1;
+        }
+        return $years;
     }
 
     /**

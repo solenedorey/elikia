@@ -76,19 +76,34 @@ class SoldierDb extends AbstractUserDb
 
     public function soldiersLikelyToRetire($period)
     {
-
+        $soldiers = $this->readAll();
+        $soldiersList = array();
+        foreach ($soldiers as $soldier) {
+            $gradeLabel = $soldier->getGrade();
+            $grade = $this->getGrade($gradeLabel);
+            $ageRequired = $grade->getAgeToRetire();
+            $yearsOfServiceRequired = $grade->getYearsToRetire();
+            $age = $soldier->getAge($period);
+            $yearsOfService = $soldier->getYearsOfService($period);
+            var_dump($age);
+            var_dump($yearsOfService);
+            if ($age >= $ageRequired && $yearsOfService >= $yearsOfServiceRequired) {
+                $soldiersList[] = $soldier;
+            }
+        }
+        return $soldiersList;
     }
 
     public function soldiersLikelyToUpgrade($aimedGrade)
     {
         $grade = $this->getGrade($aimedGrade);
-        $yearsOfServiceAsked = $grade->getYearsOfService();
+        $yearsOfServiceAsked = $grade->getYearsOfServiceToUpgrade();
         $gradeAskedId = $this->getGrade($grade->getLowerGrade())->getId();
         $yearsOfGradeAsked = $grade->getYearsOfLowerGrade();
         $diplomaRequired = $grade->getDiplomaType();
         $request = "SELECT * 
         FROM " . self::TABLE_NAME . "
-        WHERE id_grade = :gradeAskedId AND TIMESTAMPDIFF(YEAR, admission_date, DATE(NOW())) >= :yearsOfServiceAsked AND TIMESTAMPDIFF(YEAR, last_upgrade_date, DATE(NOW())) >= :yearsOfGradeAsked AND diploma = :diplomaRequired";
+        WHERE id_grade = :gradeAskedId AND TIMESTAMPDIFF(YEAR, admission_date, DATE(NOW())) >= :yearsOfServiceAsked AND TIMESTAMPDIFF(YEAR, last_upgrade_date, DATE(NOW())) >= :yearsOfGradeAsked AND level_diploma = :diplomaRequired";
         $list = array();
         $rows = parent::SqlRequest($request, true, array(':gradeAskedId' => $gradeAskedId, ':yearsOfServiceAsked' => $yearsOfServiceAsked, ':yearsOfGradeAsked' => $yearsOfGradeAsked, ':diplomaRequired' => $diplomaRequired));
         if ($rows) {

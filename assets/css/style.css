@@ -21,7 +21,20 @@ body {
     width: auto;
 }
 
-.navbar-default {
+.soldiersList li:hover {
+    background-color: #EFEFEF;
+}
+
+.right {
+    text-align: right;
+}
+
+.clickable-row {
+    width: 80%;
+    cursor: pointer;
+}
+
+/*.navbar-default {
     background: #2C3E50 none;
     height: 10vh;
 }
@@ -42,7 +55,7 @@ body {
 
 .navbar-default .navbar-nav>li>a:hover {
     color: #67ADAD;
-}
+}*/
 
 .form-filter {
     display: none;

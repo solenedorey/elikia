@@ -1,18 +1,31 @@
 var displayFormFilter = function (ev) {
     document.querySelector('.add-filter').style.display = 'none';
     document.querySelector('.form-filter').style.display = 'block';
+};
+
+var removeFormFilter = function (ev) {
+    document.querySelector('.add-filter').style.display = 'block';
+    document.querySelector('.form-filter').style.display = 'none';
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'index.php?object=soldier&amp;action=displayList');
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.responseType = 'document';
+    xhr.onload = function (ev) {
+        document.querySelector('.panel').innerHTML = ev.target.response.querySelector('.panel').innerHTML;
+    };
+    xhr.send();
 }
 
 var changeFilterOption = function (ev) {
     var valueSelected = ev.currentTarget.options[ev.currentTarget.selectedIndex].value;
-    if (valueSelected == 'promotion') {
+    if (valueSelected === 'promotion') {
         document.querySelector('.filter-retire').className += " hide";
         document.querySelector('.filter-promotion').classList.remove("hide");
-    } else if (valueSelected == 'retire') {
+    } else if (valueSelected === 'retire') {
         document.querySelector('.filter-promotion').className += " hide";
         document.querySelector('.filter-retire').classList.remove("hide");
     }
-}
+};
 
 var applyFilters = function (ev) {
     var valueFilter1 = document.querySelector('.filter-1').options[document.querySelector('.filter-1').selectedIndex].value;
@@ -23,9 +36,10 @@ var applyFilters = function (ev) {
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     xhr.responseType = 'document';
     xhr.onload = function (ev) {
+        document.querySelector('.panel-body').innerHTML = ev.target.response.querySelector('.panel-body').innerHTML;
     };
     xhr.send();
-}
+};
 
 function init()
 {
@@ -36,6 +50,8 @@ function init()
     filter1.addEventListener('change', changeFilterOption);
     var filterActionBtn = document.querySelector('.btn-filter-action');
     filterActionBtn.addEventListener('click', applyFilters);
+    var removeFilterBtn = document.querySelector('.remove-filter');
+    removeFilterBtn.addEventListener('click', removeFormFilter);
 }
 
 window.addEventListener('load',init);

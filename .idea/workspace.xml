@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aac3c1a9-1586-4a84-be54-a1afa38c4250" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/clickableRow.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/soldier/soldierDetails.twig" afterPath="$PROJECT_DIR$/assets/templates/soldier/soldierDetails.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig" afterPath="$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/ajaxSoldiersList.js" afterPath="$PROJECT_DIR$/assets/js/ajaxSoldiersList.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig" afterPath="$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php" afterPath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Soldier.php" afterPath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Soldier.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php" afterPath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php" afterPath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php" />
     </list>
@@ -32,37 +33,37 @@
       <file leaf-file-name="SoldierController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="39" column="84" lean-forward="true" selection-start-line="39" selection-start-column="84" selection-end-line="39" selection-end-column="84" />
+            <state relative-caret-position="336">
+              <caret line="39" column="83" lean-forward="true" selection-start-line="39" selection-start-column="83" selection-end-line="39" selection-end-column="83" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SoldierDb.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SoldierDb.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="78" column="8" lean-forward="true" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+            <state relative-caret-position="357">
+              <caret line="88" column="38" lean-forward="false" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
               <folding>
                 <element signature="e#36#82#0#PHP" expanded="true" />
-                <marker date="1495622835893" expanded="true" signature="612:658" ph="SELECT * FRO... grade" />
-                <marker date="1495622835893" expanded="true" signature="1389:1437" ph="SELECT * FRO... grade" />
-                <marker date="1495622835893" expanded="true" signature="2460:2732" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-                <marker date="1495622835893" expanded="true" signature="3849:3972" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-                <marker date="1495622835893" expanded="true" signature="4803:4894" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-                <marker date="1495622835893" expanded="true" signature="5818:5855" ph="INSERT INTO ${self::TABLE_NAME}... " />
-                <marker date="1495622835893" expanded="true" signature="7637:7694" ph="DELETE FROM " />
+                <marker date="1495642094474" expanded="true" signature="612:658" ph="SELECT * FRO... grade" />
+                <marker date="1495642094474" expanded="true" signature="1389:1437" ph="SELECT * FRO... grade" />
+                <marker date="1495642094474" expanded="true" signature="3156:3434" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+                <marker date="1495642094474" expanded="true" signature="4551:4674" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+                <marker date="1495642094474" expanded="true" signature="5505:5596" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+                <marker date="1495642094474" expanded="true" signature="6520:6557" ph="INSERT INTO ${self::TABLE_NAME}... " />
+                <marker date="1495642094474" expanded="true" signature="8339:8396" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Soldier.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Soldier.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Soldier.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="129" column="30" lean-forward="true" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
+            <state relative-caret-position="705">
+              <caret line="122" column="75" lean-forward="false" selection-start-line="122" selection-start-column="75" selection-end-line="122" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -89,9 +90,27 @@
       <find>fontglyphicons</find>
       <find>fontsglyphicons</find>
       <find>fonts/glyphicons</find>
+      <find>$</find>
+      <find>$y</find>
+      <find>$ye</find>
+      <find>$years</find>
+      <find>$yearsO</find>
+      <find>$yearsOf</find>
+      <find>$yearsOfS</find>
+      <find>$yearsOfSe</find>
+      <find>$yearsOfSer</find>
+      <find>$yearsOfServ</find>
+      <find>$yearsOfServi</find>
+      <find>$yearsOfServic</find>
+      <find>$yearsOfService</find>
+      <find>yearsOfService</find>
     </findStrings>
+    <replaceStrings>
+      <replace>yearsOfServiceToUpgrade</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>D:\wamp64\www\elikia</dir>
+      <dir>D:\wamp64\www\elikia\lib</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -112,15 +131,17 @@
         <option value="$PROJECT_DIR$/assets/templates/page.twig" />
         <option value="$PROJECT_DIR$/assets/templates/index.twig" />
         <option value="$PROJECT_DIR$/assets/js/cleanNode.js" />
-        <option value="$PROJECT_DIR$/assets/js/ajaxSoldiersList.js" />
-        <option value="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php" />
         <option value="$PROJECT_DIR$/assets/js/ajaxDeleteSoldier.js" />
         <option value="$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig" />
         <option value="$PROJECT_DIR$/assets/templates/soldier/soldierDetails.twig" />
+        <option value="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php" />
+        <option value="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php" />
+        <option value="$PROJECT_DIR$/assets/js/ajaxSoldiersList.js" />
+        <option value="$PROJECT_DIR$/assets/js/clickableRow.js" />
         <option value="$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php" />
         <option value="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php" />
+        <option value="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Soldier.php" />
       </list>
     </option>
   </component>
@@ -136,6 +157,9 @@
     <option name="y" value="-9" />
     <option name="width" value="1938" />
     <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -153,7 +177,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -211,6 +234,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AbstractClasses" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elikia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elikia" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sd" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Elikia" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Soldier" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -322,8 +371,27 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elikia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elikia" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -440,12 +508,13 @@
       <workItem from="1495520397049" duration="16948000" />
       <workItem from="1495558775105" duration="80000" />
       <workItem from="1495610623461" duration="1523000" />
-      <workItem from="1495616252930" duration="5948000" />
+      <workItem from="1495616252930" duration="6309000" />
+      <workItem from="1495627538726" duration="14906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50035000" />
+    <option name="totallyTimeSpent" value="65302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -455,10 +524,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858709" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -466,9 +536,27 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858709" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13802083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -481,13 +569,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -737,40 +818,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/templates/page.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="82" column="36" lean-forward="false" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Sd/Framework/AbstractClasses/AbstractUserDb.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/ajaxSoldiersList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="126" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="123" column="39" lean-forward="false" selection-start-line="123" selection-start-column="39" selection-end-line="123" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Sd/Framework/AbstractClasses/AbstractUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4041">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,35 +833,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="26" column="53" lean-forward="false" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/ajaxDeleteSoldier.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="61" lean-forward="false" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="71" column="2" lean-forward="true" selection-start-line="71" selection-start-column="2" selection-end-line="71" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldierDetails.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -818,40 +844,103 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="86" column="14" lean-forward="true" selection-start-line="86" selection-start-column="14" selection-end-line="86" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Sd/Framework/AbstractClasses/AbstractUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Soldier.php">
+    <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="129" column="30" lean-forward="true" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
+        <state relative-caret-position="378">
+          <caret line="126" column="5" lean-forward="true" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/templates/page.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="48" column="76" lean-forward="false" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="66" column="39" lean-forward="false" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/clickableRow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/ajaxDeleteSoldier.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/ajaxSoldiersList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="39" column="84" lean-forward="true" selection-start-line="39" selection-start-column="84" selection-end-line="39" selection-end-column="84" />
+        <state relative-caret-position="336">
+          <caret line="39" column="83" lean-forward="true" selection-start-line="39" selection-start-column="83" selection-end-line="39" selection-end-column="83" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="78" column="8" lean-forward="true" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+        <state relative-caret-position="357">
+          <caret line="88" column="38" lean-forward="false" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
           <folding>
             <element signature="e#36#82#0#PHP" expanded="true" />
-            <marker date="1495622835893" expanded="true" signature="612:658" ph="SELECT * FRO... grade" />
-            <marker date="1495622835893" expanded="true" signature="1389:1437" ph="SELECT * FRO... grade" />
-            <marker date="1495622835893" expanded="true" signature="2460:2732" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-            <marker date="1495622835893" expanded="true" signature="3849:3972" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-            <marker date="1495622835893" expanded="true" signature="4803:4894" ph="SELECT * FRO... ${self::TABLE_NAME}" />
-            <marker date="1495622835893" expanded="true" signature="5818:5855" ph="INSERT INTO ${self::TABLE_NAME}... " />
-            <marker date="1495622835893" expanded="true" signature="7637:7694" ph="DELETE FROM " />
+            <marker date="1495642094474" expanded="true" signature="612:658" ph="SELECT * FRO... grade" />
+            <marker date="1495642094474" expanded="true" signature="1389:1437" ph="SELECT * FRO... grade" />
+            <marker date="1495642094474" expanded="true" signature="3156:3434" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+            <marker date="1495642094474" expanded="true" signature="4551:4674" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+            <marker date="1495642094474" expanded="true" signature="5505:5596" ph="SELECT * FRO... ${self::TABLE_NAME}" />
+            <marker date="1495642094474" expanded="true" signature="6520:6557" ph="INSERT INTO ${self::TABLE_NAME}... " />
+            <marker date="1495642094474" expanded="true" signature="8339:8396" ph="DELETE FROM " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Soldier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="122" column="75" lean-forward="false" selection-start-line="122" selection-start-column="75" selection-end-line="122" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>

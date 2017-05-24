@@ -37,7 +37,7 @@ class SoldierController extends AbstractController
         if ($filterType == 'promotion') {
             $soldiersList = $this->soldierDb->soldiersLikelyToUpgrade($filterValue);
         } elseif ($filterType == 'retire') {
-            $soldiersList = $this->soldierDb->soldiersLikelyToUpgrade($filterValue);
+            $soldiersList = $this->soldierDb->soldiersLikelyToRetire($filterValue);
         }
         $this->render('soldier/soldiersList.twig', array('soldiers' => $soldiersList));
     }
