@@ -48,7 +48,7 @@
             {{ errors.admissionDate is defined ? display_errors(errors.admissionDate) : null }}
         </div>
         <div>
-            <label for="diploma">Dernier diplôme</label>
+            <label for="diploma">Niveau de diplôme</label>
             <input type="text" id="diploma" name="diploma" value="{{ soldier.diploma }}" required/>
             {{ errors.diploma is defined ? display_errors(errors.diploma) : null }}
         </div>
@@ -71,6 +71,21 @@
                    required/>
             {{ errors.lastUpgradeDate is defined ? display_errors(errors.lastUpgradeDate) : null }}
         </div>
+
+        <div>
+            <label for="login">Login</label>
+            <input type="text" id="login" name="login" value="{{ soldier.login }}"
+                   required/>
+            {{ errors.login is defined ? display_errors(errors.login) : null }}
+        </div>
+
+        <div>
+            <label for="password">Mot de passe</label>
+            <input type="text" id="password" name="password" value="{{ soldier.password }}"
+                   required/>
+            {{ errors.password is defined ? display_errors(errors.password) : null }}
+        </div>
+
         <div class="button">
             <button type="submit">{{ soldier.id is not empty ? 'Modifier' : 'Enregistrer' }}</button>
         </div>

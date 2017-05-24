@@ -52,7 +52,20 @@ body {
     margin-top: 1vh;
 }
 
-.btn-info {
+.soldiersList .btn {
+    margin-right: 1rem;
+}
+
+.filter-retire {
+    display: inline-block;
+}
+
+#filter-type, #filter-period {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#filter-grade {
     margin-right: 1rem;
 }
 

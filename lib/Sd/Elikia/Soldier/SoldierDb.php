@@ -29,7 +29,7 @@ class SoldierDb extends AbstractUserDb
     public function getAllGrades()
     {
         $request = "SELECT *
-        FROM grade";
+        FROM grade ORDER BY label ASC";
         $list = array();
         $rows = parent::SqlRequest($request, true);
         if ($rows) {
@@ -72,6 +72,11 @@ class SoldierDb extends AbstractUserDb
             $row['total_years_to_retire']
         );
         return $grade;
+    }
+
+    public function soldiersLikelyToRetire($period)
+    {
+
     }
 
     public function soldiersLikelyToUpgrade($aimedGrade)
