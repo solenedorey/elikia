@@ -48,6 +48,14 @@ body {
     display: none;
 }
 
+.navbar .container {
+    margin-top: 1vh;
+}
+
+.btn-info {
+    margin-right: 1rem;
+}
+
 /*
 
 html, body {

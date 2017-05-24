@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aac3c1a9-1586-4a84-be54-a1afa38c4250" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/ajaxSoldiersList.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ckeditor/ckeditor" afterPath="$PROJECT_DIR$/vendor/ckeditor/ckeditor" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/ajaxDeleteSoldier.js" afterPath="$PROJECT_DIR$/assets/js/ajaxDeleteSoldier.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/cleanNode.js" afterPath="$PROJECT_DIR$/assets/js/cleanNode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/index.twig" afterPath="$PROJECT_DIR$/assets/templates/index.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig" afterPath="$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig" afterPath="$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php" afterPath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php" afterPath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php" afterPath="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,17 +28,17 @@
       <file leaf-file-name="SoldierController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
+            <state relative-caret-position="555">
               <caret line="39" column="87" selection-start-line="39" selection-start-column="87" selection-end-line="39" selection-end-column="87" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SoldierDb.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SoldierDb.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="3135">
               <caret line="207" column="192" selection-start-line="207" selection-start-column="192" selection-end-line="207" selection-end-column="192" />
               <folding>
                 <element signature="e#36#82#0#PHP" expanded="true" />
@@ -64,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="soldiersList.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="soldiersList.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+            <state relative-caret-position="575">
+              <caret line="86" column="38" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -77,8 +69,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+            <state relative-caret-position="240">
+              <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -87,7 +79,7 @@
       <file leaf-file-name="soldierForm.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="825">
               <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="64" selection-end-column="19" />
               <folding />
             </state>
@@ -141,12 +133,12 @@
         <option value="$PROJECT_DIR$/assets/js/cleanNode.js" />
         <option value="$PROJECT_DIR$/assets/js/ajaxDeleteSoldier.js" />
         <option value="$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig" />
-        <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/assets/js/ajaxSoldiersList.js" />
-        <option value="$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig" />
         <option value="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php" />
         <option value="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/Grade.php" />
         <option value="$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php" />
+        <option value="$PROJECT_DIR$/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig" />
       </list>
     </option>
   </component>
@@ -668,24 +660,25 @@
       <workItem from="1495456708311" duration="10396000" />
       <workItem from="1495472678175" duration="102000" />
       <workItem from="1495520397049" duration="16948000" />
+      <workItem from="1495558775105" duration="80000" />
+      <workItem from="1495610623461" duration="1523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42484000" />
+    <option name="totallyTimeSpent" value="44087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.134895" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13812602" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -693,6 +686,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -740,7 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,7 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,7 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -871,7 +862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1113">
           <caret line="53" column="6" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,7 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -973,7 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -981,7 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -989,7 +976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -997,7 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,7 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1013,7 +997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
           <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1021,13 +1004,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
+        <state relative-caret-position="555">
           <caret line="39" column="87" selection-start-line="39" selection-start-column="87" selection-end-line="39" selection-end-column="87" />
           <folding />
         </state>
@@ -1035,7 +1017,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldierForm.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="825">
           <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="64" selection-end-column="19" />
           <folding />
         </state>
@@ -1045,15 +1027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-865">
           <caret line="123" column="39" selection-start-line="123" selection-start-column="39" selection-end-line="123" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1061,21 +1034,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="126" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="126" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Sd/Elikia/Soldier/SoldierDb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="3135">
           <caret line="207" column="192" selection-start-line="207" selection-start-column="192" selection-end-line="207" selection-end-column="192" />
           <folding>
             <element signature="e#36#82#0#PHP" expanded="true" />
@@ -1089,6 +1053,22 @@
             <marker date="1495558760000" expanded="true" signature="5725:5762" ph="INSERT INTO ${self::TABLE_NAME}... " />
             <marker date="1495558760000" expanded="true" signature="7544:7601" ph="DELETE FROM " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/templates/soldier/soldiersList.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="86" column="38" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
