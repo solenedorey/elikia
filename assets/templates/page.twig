@@ -49,9 +49,31 @@
                     <a href="index.php?object=soldier&amp;action=displayList">Soldats</a>
                 </li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    {% if not is_connected() %}
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-default navbar-btn"
+                                aria-label="Left Align" data-toggle="modal"
+                                data-target="#sign-in-modal">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            Se connecter
+                        </button>
+                    {% else %}
+                        <button type="button" class="btn btn-default navbar-btn"
+                                aria-label="Left Align" data-toggle="modal"
+                                data-target="#sign-in-modal">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            {{ global.session.login }}
+                        </button>
+                    {% endif %}
+                </li>
+            </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
+
+{{ include('frag/connectionForm.twig') }}
 
 <div class="container theme-showcase" role="main">
 

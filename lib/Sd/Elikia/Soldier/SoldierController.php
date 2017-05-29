@@ -25,6 +25,7 @@ class SoldierController extends AbstractController
 
     public function displayList()
     {
+        $this->roleManager->verifyAccess('secretary');
         $soldiers = $this->soldierDb->readAll();
         $gradesList = $this->soldierDb->getAllGrades();
         $this->render('soldier/soldiersList.twig', array('soldiers' => $soldiers, 'grades' => $gradesList));

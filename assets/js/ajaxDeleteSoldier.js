@@ -6,7 +6,7 @@ var xhrHtml = function (ev) {
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     xhr.responseType = 'document';
     xhr.onload = function (ev) {
-        document.querySelector('.soldiersList').removeChild(document.querySelector('.soldiersList li[data-id="' + idSoldier + '"]'));
+        document.querySelector('.soldiersList tbody').removeChild(document.querySelector('.soldiersList tbody tr[data-id="' + idSoldier + '"]'));
     };
     xhr.send();
 };

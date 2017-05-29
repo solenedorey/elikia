@@ -37,6 +37,15 @@ class Twig
             'debug' => true
         ));
 
+        //globals
+
+        $globals = array();
+        $user = AuthenticationManager::getInstance()->getInfoUser();
+        if ($user !== null) {
+            $globals['session'] = $user;
+        }
+        $this->twig->addGlobal('global', $globals);
+
         //debug
         $this->twig->addExtension(new \Twig_Extension_Debug());
 
@@ -57,6 +66,7 @@ class Twig
             return AuthenticationManager::getInstance($this->request)->isConnected();
         });
         $this->twig->addFunction($isConnected);
+
         $isXhrRequest = new Twig_SimpleFunction('is_xhr_request', function () {
             return $this->request->isXhrRequest();
         });

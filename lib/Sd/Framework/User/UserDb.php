@@ -2,6 +2,7 @@
 namespace Sd\Framework\User;
 
 use Jml\Tools\Database\ConnectionSingleton;
+use Sd\Elikia\Secretary\Secretary;
 use Sd\Elikia\Soldier\Soldier;
 use Sd\Framework\AbstractClasses\AbstractUser;
 
@@ -33,13 +34,17 @@ class UserDb
      */
     public function checkUser($login, $password)
     {
-        $request = "SELECT *
+        $request = "SELECT * 
         FROM soldier 
+        JOIN grade
+        USING (id_grade)
         WHERE login = :login AND password = :password";
         $stmt = $this->db->prepare($request);
         $stmt->execute(array(':login' => $login, ':password' => $password));
         $row = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         if ($row) {
+            var_dump($row);
+            die();
             $row = $row[0];
             $soldier = new Soldier(
                 $row['id_soldier'],
@@ -52,8 +57,8 @@ class UserDb
                 $row['password'],
                 $row['gender'],
                 $row['admission_date'],
-                $row['diploma'],
-                $row['grade'],
+                $row['level_diploma'],
+                $row['label'],
                 $row['last_upgrade_date']
             );
             return $soldier;
@@ -61,7 +66,9 @@ class UserDb
         $request = "SELECT *
         FROM secretary 
         WHERE login = :login AND password = :password";
-        $row = $this->SqlRequest($request, true, array(':login' => $login, ':password' => $password));
+        $stmt = $this->db->prepare($request);
+        $stmt->execute(array(':login' => $login, ':password' => $password));
+        $row = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         if ($row) {
             $row = $row[0];
             $secretary = new Secretary(
@@ -79,7 +86,9 @@ class UserDb
         $request = "SELECT *
         FROM admin 
         WHERE login = :login AND password = :password";
-        $row = $this->SqlRequest($request, true, array(':login' => $login, ':password' => $password));
+        $stmt = $this->db->prepare($request);
+        $stmt->execute(array(':login' => $login, ':password' => $password));
+        $row = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         if ($row) {
             $row = $row[0];
             $admin = new Admin(

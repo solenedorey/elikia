@@ -78,8 +78,12 @@ body {
     margin-right: 1rem;
 }
 
-#filter-grade {
+#filter-grade{
     margin-right: 1rem;
+}
+
+.remove-filter {
+    margin-bottom: 1rem;
 }
 
 /*

@@ -85,8 +85,6 @@ class SoldierDb extends AbstractUserDb
             $yearsOfServiceRequired = $grade->getYearsToRetire();
             $age = $soldier->getAge($period);
             $yearsOfService = $soldier->getYearsOfService($period);
-            var_dump($age);
-            var_dump($yearsOfService);
             if ($age >= $ageRequired && $yearsOfService >= $yearsOfServiceRequired) {
                 $soldiersList[] = $soldier;
             }

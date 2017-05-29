@@ -10,6 +10,10 @@
         <button type="button" class="btn btn-primary add-filter">Ajouter un filtre</button>
 
         <form action="" class="form-inline form-filter" method="post">
+            <div>
+                <button type="button" class="btn btn-primary remove-filter">Enlever les filtres</button>
+            </div>
+
             <div class="form-group">
                 Afficher les militaires qui
             </div>
@@ -49,7 +53,6 @@
 
             <button type="button" class="btn btn-default btn-filter-action">Filtrer</button>
 
-            <button type="button" class="btn btn-primary remove-filter">Enlever les filtres</button>
         </form>
 
         <div class="panel panel-default" style="margin-top:35px;">
@@ -69,7 +72,7 @@
                         </thead>
                         <tbody>
                         {% for soldier in soldiers %}
-                            <tr>
+                            <tr data-id="{{ soldier.id }}">
                                 <td class="clickable-row"
                                 data-url="index.php?object=soldier&amp;action=displayDetails&amp;idSoldier={{ soldier.id }}">
                                     <a href="index.php?object=soldier&amp;action=displayDetails&amp;idSoldier={{ soldier.id }}">
@@ -111,6 +114,11 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <a class="btn btn-xs btn-default pull-right" aria-label="Left Align"
+                                       href="index.php?object=soldier&amp;action=edit&amp;idSoldier={{ soldier.id }}">
+                                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                                    </a>
 
                                     <a class="btn btn-xs btn-default pull-right" aria-label="Left Align"
                                        href="index.php?object=soldier&amp;action=edit&amp;idSoldier={{ soldier.id }}">
