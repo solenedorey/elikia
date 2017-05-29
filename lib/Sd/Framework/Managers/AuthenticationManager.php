@@ -51,6 +51,7 @@ class AuthenticationManager
 
     /**
      * Permet de récupérer les infos concernant l'utilisateur.
+     * @param null $key
      * @return null
      */
     public function getInfoUser($key = null)

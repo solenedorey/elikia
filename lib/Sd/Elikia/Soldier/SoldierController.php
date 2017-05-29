@@ -33,6 +33,7 @@ class SoldierController extends AbstractController
     
     public function displayListWithFilters() 
     {
+        $this->roleManager->verifyAccess('secretary');
         $filterType = $this->request->getItemGet('filter');
         $filterValue = $this->request->getItemGet('value');
         if ($filterType == 'promotion') {
@@ -45,6 +46,7 @@ class SoldierController extends AbstractController
 
     public function displayDetails()
     {
+        $this->roleManager->verifyAccess('secretary');
         $idSoldier = $this->request->getItemGet('idSoldier');
         $soldier = $this->soldierDb->read($idSoldier);
         $this->render('soldier/soldierDetails.twig', array('soldier' => $soldier));
@@ -52,6 +54,7 @@ class SoldierController extends AbstractController
 
     public function edit()
     {
+        $this->roleManager->verifyAccess('secretary');
         if (!is_null($this->request->getItemGet('idSoldier'))) {
             $idSoldier = $this->request->getItemGet('idSoldier');
             $soldier = $this->soldierDb->read($idSoldier);
@@ -59,7 +62,7 @@ class SoldierController extends AbstractController
             $soldier = Soldier::createUnknownSoldier();
         }
         $gradesList = $this->soldierDb->getAllGrades();
-        $this->render('soldier/SoldierForm.twig', array('soldier' => $soldier, 'grades' => $gradesList));
+        $this->render('soldier/soldierForm.twig', array('soldier' => $soldier, 'grades' => $gradesList));
     }
 
     /**
@@ -73,6 +76,7 @@ class SoldierController extends AbstractController
      */
     public function save()
     {
+        $this->roleManager->verifyAccess('secretary');
         $formData = SoldierForm::clean($this->request->getPost());
         if (!is_null($this->request->getItemPost('idSoldier'))) {
             $id = (int)$this->request->getItemPost('idSoldier');
@@ -96,6 +100,7 @@ class SoldierController extends AbstractController
      */
     public function delete()
     {
+        $this->roleManager->verifyAccess('admin');
         $id = $_GET['idSoldier'];
         $this->soldierDb->delete($id);
         $this->displayList();

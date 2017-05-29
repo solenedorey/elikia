@@ -25,12 +25,14 @@ class SecretaryController extends AbstractController
 
     public function displayList()
     {
+        $this->roleManager->verifyAccess('admin');
         $secretaries = $this->secretaryDb->readAll();
         $this->render('secretary/secretariesList.twig', array('secretaries' => $secretaries));
     }
 
     public function displayDetails()
     {
+        $this->roleManager->verifyAccess('admin');
         $idSecretary = $this->request->getItemGet('idSecretary');
         $secretary = $this->secretaryDb->read($idSecretary);
         $this->render('secretary/secretaryDetails.twig', array('secretary' => $secretary));
@@ -38,19 +40,20 @@ class SecretaryController extends AbstractController
 
     public function edit()
     {
+        $this->roleManager->verifyAccess('secretary');
         if (!is_null($this->request->getItemGet('idSecretary'))) {
             $idSecretary = $this->request->getItemGet('idSecretary');
             $secretary = $this->secretaryDb->read($idSecretary);
         } else {
             $secretary = Secretary::createUnknownSecretary();
         }
-        $this->render('secretary/SecretaryForm.twig', array('secretary' => $secretary));
+        $this->render('secretary/secretaryForm.twig', array('secretary' => $secretary));
     }
 
     /**
-     * Enregistrement d'un nouveau militaire :
+     * Enregistrement d'un(e) secrétaire :
      * - récupérer les données POST et les nettoyer
-     * - initialiser un objet Secretary avec ces données ou bien lire le militaire en BD et le modifier
+     * - initialiser un objet Secretary avec ces données ou bien lire le/la secrétaire en BD et le modifier
      * - instancier un gestionnaire du formulaire
      * - demander au gestionnaire si les données sont valides :
      *     - si oui, enregister le militaire en BD puis l'afficher
@@ -58,6 +61,7 @@ class SecretaryController extends AbstractController
      */
     public function save()
     {
+        $this->roleManager->verifyAccess('secretary');
         $formData = SecretaryForm::clean($this->request->getPost());
         if (!is_null($this->request->getItemPost('idSecretary'))) {
             $id = (int)$this->request->getItemPost('idSecretary');
@@ -77,10 +81,11 @@ class SecretaryController extends AbstractController
     }
 
     /**
-     * Supprime un article.
+     * Supprime un(e) secrétaire.
      */
     public function delete()
     {
+        $this->roleManager->verifyAccess('admin');
         $id = $_GET['idSecretary'];
         $this->secretaryDb->delete($id);
         $this->displayList();

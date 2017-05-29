@@ -2,6 +2,7 @@
 namespace Sd\Framework\User;
 
 use Jml\Tools\Database\ConnectionSingleton;
+use Sd\Elikia\Admin\Admin;
 use Sd\Elikia\Secretary\Secretary;
 use Sd\Elikia\Soldier\Soldier;
 use Sd\Framework\AbstractClasses\AbstractUser;
@@ -43,8 +44,6 @@ class UserDb
         $stmt->execute(array(':login' => $login, ':password' => $password));
         $row = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         if ($row) {
-            var_dump($row);
-            die();
             $row = $row[0];
             $soldier = new Soldier(
                 $row['id_soldier'],
@@ -92,7 +91,7 @@ class UserDb
         if ($row) {
             $row = $row[0];
             $admin = new Admin(
-                $row['id_secretary'],
+                $row['id_admin'],
                 $row['name'],
                 $row['surname'],
                 $row['birth_date'],

@@ -1,7 +1,7 @@
 {% extends 'layout.twig' %}
 
 {% block titre %}
-    Informations du militaire {{ soldier.name }} {{ soldier.surname }}
+    <div class="page-header"><h2>Informations du militaire {{ soldier.name }} {{ soldier.surname }}</h2></div>
 {% endblock %}
 
 {% block contenu %}
@@ -15,11 +15,13 @@
         <li>Grade actuel : {{ soldier.grade }}</li>
         <li>Date d'acquisition du grade : {{ soldier.lastUpgradeDate }}</li>
     </ul>
-    <a class="btn btn-primary" aria-label="Left Align"
-       href="index.php?object=soldier&amp;action=edit&amp;idSoldier={{ soldier.id }}">
-        Modifier ces informations
-    </a>
-    <a class="btn btn-default" aria-label="Left Align" href="index.php?object=soldier&amp;action=displayList">
-        Retour à la liste des militaires
-    </a>
+    {% if global.session.status == 'admin' or global.session.status == 'secretary' %}
+        <a class="btn btn-primary" aria-label="Left Align"
+           href="index.php?object=soldier&amp;action=edit&amp;idSoldier={{ soldier.id }}">
+            Modifier ces informations
+        </a>
+        <a class="btn btn-default" aria-label="Left Align" href="index.php?object=soldier&amp;action=displayList">
+            Retour à la liste des militaires
+        </a>
+    {% endif %}
 {% endblock %}

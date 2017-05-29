@@ -94,7 +94,6 @@ class SecretaryDb extends AbstractUserDb
         $request = "UPDATE " . self::TABLE_NAME . " " . $this->requestPart() . " WHERE id_secretary=:id";
         $data = $this->dataPart($user);
         $data["id"] = $user->getId();
-        var_dump($data);
         return parent::SqlRequest($request, false, $data);
     }
 

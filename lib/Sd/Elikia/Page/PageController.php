@@ -1,13 +1,17 @@
 <?php
 namespace Sd\Elikia\Page;
 
+use Sd\Elikia\Admin\AdminDb;
+use Sd\Elikia\Secretary\SecretaryDb;
+use Sd\Elikia\Soldier\SoldierDb;
 use Sd\Framework\AbstractClasses\AbstractController;
+use Sd\Framework\Exceptions\AuthenticationException;
 use Sd\Framework\HttpFoundation\Response;
 use Sd\Framework\HttpFoundation\Request;
 use Sd\Framework\Managers\AuthenticationManager;
 
 /**
- * Classe PageControleur
+ * Class PageController
  * @package Sd\Elikia\Page
  */
 class PageController extends AbstractController
@@ -50,5 +54,33 @@ class PageController extends AbstractController
     {
         AuthenticationManager::getInstance($this->request)->logOut();
         header('Location: index.php');
+    }
+
+    /**
+     * Permet l'affichage des informations de l'utilisateur connecté
+     */
+    public function displayMyInformation()
+    {
+        if (!AuthenticationManager::getInstance()->isConnected()) {
+            throw new AuthenticationException();
+        }
+        $user = AuthenticationManager::getInstance($this->request);
+        $status = $user->getInfoUser('status');
+        $id = $user->getInfoUser('id');
+        switch ($status) {
+            case 'soldier':
+                $soldier = (new SoldierDb)->read($id);
+                $this->render('soldier/soldierDetails.twig', array('soldier' => $soldier));
+                break;
+            case 'secretary':
+                $secretary = (new SecretaryDb)->read($id);
+                $this->render('secretary/secretaryDetails.twig', array('secretary' => $secretary));
+                break;
+            case 'admin':
+                $admin = (new AdminDb)->read($id);
+                $this->render('admin/adminDetails.twig', array('admin' => $admin));
+                break;
+        }
+
     }
 }

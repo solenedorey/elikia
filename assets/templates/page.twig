@@ -42,12 +42,21 @@
                 <li>
                     <a href="index.php">Accueil</a>
                 </li>
-                <li>
-                    <a href="index.php?action=about">A propos</a>
-                </li>
-                <li>
-                    <a href="index.php?object=soldier&amp;action=displayList">Soldats</a>
-                </li>
+                {% if global.session.status == 'admin' or global.session.status == 'secretary' %}
+                    <li>
+                        <a href="index.php?object=soldier&amp;action=displayList">Soldats</a>
+                    </li>
+                {% endif %}
+                {% if global.session.status == 'admin' %}
+                    <li>
+                        <a href="index.php?object=secretary&amp;action=displayList">Secrétaires</a>
+                    </li>
+                {% endif %}
+                {% if is_connected() %}
+                    <li>
+                        <a href="index.php?action=displayMyInformation">Mes informations</a>
+                    </li>
+                {% endif %}
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -77,29 +86,8 @@
 
 <div class="container theme-showcase" role="main">
 
-    {#<header class="principal">
-        <a href="index.php"><img src="assets/media/images/logo.png" alt="logo"></a>
-        <h1><a href="index.php">ELIKIA</a></h1>
-        <nav id="menu_principal">
-            <ul>
-                <li>
-                    <a href="index.php">Accueil</a>
-                </li>
-                <li>
-                    <a href="index.php?action=about">A propos</a>
-                </li>
-                <li>
-                    <a href="index.php?object=soldier&amp;action=displayList">Soldats</a>
-                </li>
-            </ul>
-            {{ include('frag/connectionForm.twig') }}
-        </nav>
-    </header>#}
-
-    <main>
-        <h2>{% block titre %}{% endblock %}</h2>
-        {% block contenu %}{% endblock %}
-    </main>
+    {% block titre %}{% endblock %}
+    {% block contenu %}{% endblock %}
 
 </div>
 {% block javascript %}{% endblock %}

@@ -63,6 +63,9 @@ class Router
             case 'soldier':
                 $this->controllerClassName = 'Sd\Elikia\Soldier\SoldierController';
                 break;
+            case 'secretary':
+                $this->controllerClassName = 'Sd\Elikia\Secretary\SecretaryController';
+                break;
             default:
                 $this->controllerClassName = 'Sd\Elikia\Page\PageController';
                 break;

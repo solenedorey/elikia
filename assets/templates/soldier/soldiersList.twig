@@ -1,7 +1,7 @@
 {% extends 'layout.twig' %}
 
 {% block titre %}
-    Liste des militaires
+    <div class="page-header"><h2>Liste des militaires</h2></div>
 {% endblock %}
 
 {% block contenu %}
@@ -74,47 +74,49 @@
                         {% for soldier in soldiers %}
                             <tr data-id="{{ soldier.id }}">
                                 <td class="clickable-row"
-                                data-url="index.php?object=soldier&amp;action=displayDetails&amp;idSoldier={{ soldier.id }}">
+                                    data-url="index.php?object=soldier&amp;action=displayDetails&amp;idSoldier={{ soldier.id }}">
                                     <a href="index.php?object=soldier&amp;action=displayDetails&amp;idSoldier={{ soldier.id }}">
                                         {{ soldier.name }} {{ soldier.surname }}
                                     </a>
                                 </td>
                                 <td>
+                                    {% if global.session.status == 'admin' %}
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-xs btn-danger pull-right"
+                                                aria-label="Left Align" data-toggle="modal"
+                                                data-target="#delete-{{ soldier.id }}">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                        </button>
 
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-xs btn-danger pull-right"
-                                            aria-label="Left Align" data-toggle="modal"
-                                            data-target="#delete-{{ soldier.id }}">
-                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                    </button>
-
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="delete-{{ soldier.id }}" tabindex="-1" role="dialog"
-                                         aria-labelledby="delete-warning">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close"><span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                    <h4 class="modal-title" id="delete-warning">Attention</h4>
-                                                </div>
-                                                <div class="modal-body">
-                                                    Souhaitez-vous vraiment
-                                                    retirer {{ soldier.name }} {{ soldier.surname }} de la liste ?
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <a href="index.php?object=soldier&amp;action=delete&amp;idSoldier={{ soldier.id }}"
-                                                       data-id="{{ soldier.id }}" class="btn btn-primary delete-btn"
-                                                       data-dismiss="modal">Oui</a>
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">
-                                                        Non
-                                                    </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="delete-{{ soldier.id }}" tabindex="-1" role="dialog"
+                                             aria-labelledby="delete-warning">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close"><span
+                                                                    aria-hidden="true">&times;</span>
+                                                        </button>
+                                                        <h4 class="modal-title" id="delete-warning">Attention</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Souhaitez-vous vraiment
+                                                        retirer {{ soldier.name }} {{ soldier.surname }} de la liste ?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a href="index.php?object=soldier&amp;action=delete&amp;idSoldier={{ soldier.id }}"
+                                                           data-id="{{ soldier.id }}" class="btn btn-primary delete-btn"
+                                                           data-dismiss="modal">Oui</a>
+                                                        <button type="button" class="btn btn-default"
+                                                                data-dismiss="modal">
+                                                            Non
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
+                                    {% endif %}
                                     <a class="btn btn-xs btn-default pull-right" aria-label="Left Align"
                                        href="index.php?object=soldier&amp;action=edit&amp;idSoldier={{ soldier.id }}">
                                         <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
